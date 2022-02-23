@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
   
         </div>
         <StyledTitle size={65}>
-          Welcome to our Course Web App
+          Welcome to our Course Web App!
         </StyledTitle>
         <StyledSubTitle size={27}>
           Feel free to explore our page
