@@ -27,7 +27,7 @@ const StyledContainer = styled.div`
     background: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${background});
     background-size: cover;
     background-attachment: fixed;
-`
+`;
 
 export default StyledContainer;
 
