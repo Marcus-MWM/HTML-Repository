@@ -15,16 +15,18 @@ import { Link } from 'react-router-dom';
         </StyledSubTitle>
   
         <ButtonGroup>
-          <StyledButton to="Login">
-            <Link to='./pages/Login'>
+          <StyledButton to="/login">
+            {/* <Link to='./pages/Login'>
               Login
-            </Link>
+            </Link> */}
+            Login
           </StyledButton>
 
           <StyledButton to="/signup">
-            <Link to='./components/Signup/'>
+            {/* <Link to='./components/Signup/'>
               Signup
-            </Link>
+            </Link> */}
+            Signup
           </StyledButton>
         </ButtonGroup>
       </div>

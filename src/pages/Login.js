@@ -4,7 +4,7 @@ import { StyledTextInput, StyledFormArea,
     StyledTitle, colors, ButtonGroup, ExtraText,
     TextLink, CopyrightText } from "../Styles";
 
-import Logo from './../assests/logo.png';
+import Logo from './../assests/grad_logo.png';
 
 // formik
 import { Formik, Form } from "formik";
@@ -22,7 +22,7 @@ const Login = () => {
             <StyledFormArea>
                 <Avatar image={Logo} />
                 <StyledTitle color={colors.theme} size={30}>
-                    Member Login
+                    Login
                 </StyledTitle>
                 <Formik
                     initialValues={{

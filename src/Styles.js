@@ -21,10 +21,11 @@ export const colors ={
 const StyledContainer = styled.div`
     margin: 0;
     min-height: 100vh;
+    min-width: ${(props) => props.size}vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${background});
+    background: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${props => props.image});
     background-size: cover;
     background-attachment: fixed;
 `;
@@ -49,7 +50,7 @@ export const StyledSubTitle = styled.p`
 `;
 
 export const Avatar = styled.div`
-    width: 85px;
+    width: 105px;   // was 85px before
     height: 85px;
     border-radius: 50px;
     background-image: url(${props => props.image});
