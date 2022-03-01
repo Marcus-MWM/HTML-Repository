@@ -1,18 +1,22 @@
 // styled components
 import { StyledTextInput, StyledFormArea, 
     StyledFormButton, StyledLabel, Avatar, 
-    StyledTitle, colors, ButtonGroup } from "../Styles";
+    StyledTitle, colors, ButtonGroup, ExtraText,
+    TextLink, CopyrightText } from "../Styles";
 
 import Logo from './../assests/logo.png';
 
 // formik
 import { Formik, Form } from "formik";
 import { TextInput } from "..//FormLib";
+import * as Yup from "yup";
 
 //icons
 import {FiMail, FiLock} from 'react-icons/fi';
 
+
 const Login = () => {
+
     return (
         <div>
             <StyledFormArea>
@@ -20,7 +24,24 @@ const Login = () => {
                 <StyledTitle color={colors.theme} size={30}>
                     Member Login
                 </StyledTitle>
-                <Formik>
+                <Formik
+                    initialValues={{
+                        email: "",
+                        password: "",
+                    }}
+                    validationSchema={Yup.object({
+                        email: Yup.string()
+                        .email("Invalid email address")
+                        .required("Requied"),
+                        password: Yup.string()
+                        .min(8, "Password is too short")
+                        .max(30, "Password is too long")
+                        .required("Required"),
+                    })}
+                    onSubmit={(values, {setSubmitting}) => {
+                        console.log(values);
+                    }}
+                >
                     {() => (
                         <Form>
                             <TextInput
@@ -37,6 +58,8 @@ const Login = () => {
                                 label="Password"
                                 placeholder="********"
                                 icon={<FiLock />}
+
+                                
                             />
                             <ButtonGroup>
                                 <StyledFormButton
@@ -47,7 +70,13 @@ const Login = () => {
                         </Form>
                     )}
                 </Formik>
+                <ExtraText>
+                    New here? <TextLink to="/signup">Signup</TextLink>
+                </ExtraText>
             </StyledFormArea>
+            <CopyrightText>
+                All rights reserved &copy;2020
+            </CopyrightText>
         </div>
     );
 };

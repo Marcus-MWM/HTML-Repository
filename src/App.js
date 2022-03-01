@@ -22,8 +22,9 @@ function App() {
     <Router>
       <StyledContainer>
         {/* <Navbar/> */}
-        <Home/>
-        {/* </Login> */}
+        {/* <Home/> */}
+        <Login/>
+
     
   {/* <h1>Login Page</h1>
   <div>
