@@ -27,7 +27,7 @@ import { Link } from 'react-router-dom';
             {/* <Link to='./components/Signup/'>
               Signup
             </Link> */}
-            Signup
+            Sign Up
           </StyledButton>
         </ButtonGroup>
       </div>
