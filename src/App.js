@@ -14,6 +14,9 @@ import Dashboards from './pages/Dashboards';
 //styled components
 import StyledContainer from './Styles';
 
+// Loader
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
 import Beach from '././assests/beach.jpg';
 import Wood from '././assests/bg.jpg';
 

@@ -14,9 +14,17 @@ import * as Yup from "yup";
 //icons
 import {FiMail, FiLock} from 'react-icons/fi';
 
+// Loader
+import {ThreeDots} from 'react-loader-spinner';
 
-const Login = () => {
+// auth & redux
+import { connect } from "react-redux";
+import { loginUser } from "../auth/actions/userActions";
+import { useHistory } from "react-router-dom";
 
+
+const Login = ({loginUser}) => {
+        const history = useHistory();
     return (
         <div>
             <StyledFormArea>
@@ -38,11 +46,12 @@ const Login = () => {
                         .max(30, "Password is too long")
                         .required("Required"),
                     })}
-                    onSubmit={(values, {setSubmitting}) => {
+                    onSubmit={(values, {setSubmitting, setFieldError}) => {
                         console.log(values);
+                        loginUser(values, history, setFieldError, setSubmitting);
                     }}
                 >
-                    {() => (
+                    {({isSubmitting}) => (
                         <Form>
                             <TextInput
                                 name="email"
@@ -62,10 +71,19 @@ const Login = () => {
                                 
                             />
                             <ButtonGroup>
-                                <StyledFormButton
-                                type="submit">
-                                    Login
-                                </StyledFormButton>
+                                {!isSubmitting && (
+                                    <StyledFormButton type="submit">
+                                        Login
+                                    </StyledFormButton>
+                                )}
+
+                                {isSubmitting && (
+                                    <ThreeDots
+                                    color={colors.theme}
+                                    height={49}
+                                    width={100}                                
+                                />
+                                )}
                             </ButtonGroup>
                         </Form>
                     )}
@@ -81,4 +99,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default connect(null, {loginUser})(Login);
