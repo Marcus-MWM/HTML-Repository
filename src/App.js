@@ -21,6 +21,7 @@ import {
 function App() {
   return (
     <Router>
+      <Navbar />
       <StyledContainer image={Beach} >
         
         <Switch>
