@@ -6,14 +6,10 @@
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Dashboards from './pages/Dashboards';
-
-
-// import {Route, Link} from 'react-router-dom';
-// import Navbar from './components/Navbar/Navbar';
+import Navbar from "./components/Navbar/Navbar";
 
 //styled components
 import StyledContainer from './Styles';
-
 import Beach from '././assests/beach.jpg';
 import Wood from '././assests/bg.jpg';
 
@@ -22,29 +18,23 @@ import {
   Switch, Route
 } from 'react-router-dom';
 
-
 function App() {
   return (
     <Router>
       <StyledContainer image={Beach} >
+        
         <Switch>
-          {/* <Route path="/signup">
-
-          </Route> */}
-          <Route path="/login">
-            <Login/>
-          </Route>
-          <Route path="/dashboards">
-            <Dashboards />
-          </Route>
+        
+          {/* <Route path="/signup"> </Route> */}
+          <Route path="/login"> <Login/> </Route>
+          <Route path="/dashboards"> <Dashboards /> </Route>
           <StyledContainer image={Wood} size={207}>
             <Route path="/">
               <Home />
             </Route>
           </StyledContainer>
-          {/* <Route path="/">
-            <Home />
-          </Route> */}
+          {/* <Route path="/"><Home /></Route> */}
+          
         </Switch>
 
         {/* <Navbar/> */}

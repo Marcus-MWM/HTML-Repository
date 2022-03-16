@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
     return (
       <div>
         <div>
-  
+
         </div>
         <StyledFormArea bg={colors.dark2}>
           <StyledTitle size={65}>

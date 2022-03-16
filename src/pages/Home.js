@@ -1,11 +1,12 @@
 import { StyledTitle, StyledSubTitle, StyledButton, ButtonGroup } from "../Styles";
 import { Link } from 'react-router-dom';
-  
+
+
   const Home = () => {
     return (
       <div>
         <div>
-  
+          
         </div>
         <StyledTitle size={65}>
           Welcome to our Course Web App!
