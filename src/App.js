@@ -6,6 +6,7 @@
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Dashboards from './pages/Dashboards';
+import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar/Navbar";
 
 //styled components
@@ -34,6 +35,7 @@ function App() {
         <Switch>
         
           {/* <Route path="/signup"> </Route> */}
+          <Route path="/signup"> <Signup /> </Route>
           <Route path="/login"> <Login/> </Route>
           <Route path="/dashboards"> <Dashboards /> </Route>
           <StyledContainer image={Wood} size={207}>
