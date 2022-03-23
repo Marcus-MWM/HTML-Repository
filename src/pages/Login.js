@@ -25,6 +25,9 @@ import { useHistory } from "react-router-dom";
 
 const Login = ({loginUser}) => {
         const history = useHistory();
+        const emailAddress = [
+            'test@gmail.com',
+        ];
     return (
         <div>
             <StyledFormArea>
@@ -40,6 +43,7 @@ const Login = ({loginUser}) => {
                     validationSchema={Yup.object({
                         email: Yup.string()
                         .email("Invalid email address")
+                        .oneOf(emailAddress, " ")
                         .required("Requied"),
                         password: Yup.string()
                         .min(8, "Password is too short")
@@ -93,7 +97,7 @@ const Login = ({loginUser}) => {
                 </ExtraText>
             </StyledFormArea>
             <CopyrightText>
-                All rights reserved &copy;2020
+                All rights reserved &copy;2022
             </CopyrightText>
         </div>
     );
