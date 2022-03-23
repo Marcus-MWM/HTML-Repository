@@ -102,7 +102,7 @@ export const StyledTextInput = styled.input`
 
     ${(props) => props.invalid && 
         `background-color: ${colors.red}; color: $
-        {colors.primary};`}
+        {colors.primary};`} // Must change to have no red
 
     &:focus {
         background-color: ${colors.dark2};
