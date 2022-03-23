@@ -24,6 +24,7 @@ import { signupUser } from "../auth/actions/userActions";
 import { useHistory } from "react-router-dom";
 
 import "./Signup.css";
+
 const Signup = ({signupUser}) => {
         const history = useHistory();
         
