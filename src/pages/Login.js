@@ -22,9 +22,20 @@ import { connect } from "react-redux";
 import { loginUser } from "../auth/actions/userActions";
 import { useHistory } from "react-router-dom";
 
+import { initializeApp } from 'firebase/app';
+
+// TODO: Replace the following with your app's Firebase project configuration
+const firebaseConfig = {
+  //...
+};
+
+const app = initializeApp(firebaseConfig);
 
 const Login = ({loginUser}) => {
         const history = useHistory();
+        const emailAddress = [
+            'test@gmail.com',
+        ];
     return (
         <div>
             <StyledFormArea>
@@ -40,6 +51,7 @@ const Login = ({loginUser}) => {
                     validationSchema={Yup.object({
                         email: Yup.string()
                         .email("Invalid email address")
+                        .oneOf(emailAddress, " ")
                         .required("Requied"),
                         password: Yup.string()
                         .min(8, "Password is too short")
@@ -93,7 +105,7 @@ const Login = ({loginUser}) => {
                 </ExtraText>
             </StyledFormArea>
             <CopyrightText>
-                All rights reserved &copy;2020
+                All rights reserved &copy;2022
             </CopyrightText>
         </div>
     );

@@ -5,6 +5,7 @@ import { StyledTextInput, StyledFormArea,
     TextLink, CopyrightText } from "../Styles";
 
 import Logo from './../assests/grad_logo.png';
+import styled from "styled-components";
 
 // formik
 import { Formik, Form } from "formik";
@@ -22,6 +23,7 @@ import { connect } from "react-redux";
 import { signupUser } from "../auth/actions/userActions";
 import { useHistory } from "react-router-dom";
 
+import "./Signup.css";
 
 const Signup = ({signupUser}) => {
         const history = useHistory();
@@ -59,8 +61,6 @@ const Signup = ({signupUser}) => {
                         dateOfBirth: Yup.date().required("Required"),
                         repeatPassword: Yup.string().required("Required").
                         oneOf([Yup.ref("password")], "Passwords must match"),
-                        grad: Yup.string()
-                        .required(),
                     })}
                     onSubmit={(values, {setSubmitting, setFieldError}) => {
                         signupUser(values, history, 
@@ -82,15 +82,11 @@ const Signup = ({signupUser}) => {
                                 placeholder="olga1@example.com"
                                 icon={<FiMail />}
                             />
-                            <TextInput
-                                name="grad"
-                                type="checkbox"
-                                label="Graduate"
-                            />
 
-                            <select className='w-96'>
-                                <option>Graduate</option>
-                                <option>Ungraduate</option>
+                            <p class="title">Graduate or Undergraduate</p>
+                            <select class="test">
+                                <option value={"Graduate"}>Graduate</option>
+                                <option value={"Undergraduate"}>Undergraduate</option>
                             </select>
 
                             <TextInput
@@ -125,7 +121,7 @@ const Signup = ({signupUser}) => {
                                     <ThreeDots
                                     color={colors.theme}
                                     height={49}
-                                    width={100}                                
+                                    width={100}                               
                                 />
                                 )}
                             </ButtonGroup>
@@ -137,7 +133,7 @@ const Signup = ({signupUser}) => {
                 </ExtraText>
             </StyledFormArea>
             <CopyrightText>
-                All rights reserved &copy;2020
+                All rights reserved &copy;2022
             </CopyrightText>
         </div>
     );
