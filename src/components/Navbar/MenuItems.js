@@ -13,6 +13,12 @@ export const MenuItems = [
     },
 
     {
+        title: 'Courses',
+        url: './Courses',
+        cName: 'nav-links'
+    },
+
+    {
         title: 'About',
         url: './About',
         cName: 'nav-links'
@@ -23,10 +29,4 @@ export const MenuItems = [
         url: './Contact',
         cName: 'nav-links'
     },
-
-    {
-        title: 'Courses',
-        url: './Courses',
-        cName: 'nav-links'
-    }
 ]
