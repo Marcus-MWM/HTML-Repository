@@ -6,6 +6,7 @@ import background from './assests/bg.jpg';
 
 // React router
 import { Link } from "react-router-dom";
+import { blueGrey } from "@material-ui/core/colors";
 
 export const colors ={
     primary: '#fff',
@@ -121,6 +122,18 @@ export const StyledFormArea = styled.div`
     colors.light1};
     text-align: center;
     padding: 45px 55px;
+`;
+
+export const StyledFormArea2 = styled.div`
+    background-color: lightblue;
+    text-align: center;
+    // width: 100%;
+    // height: 40px;
+    padding: 45px 55px;
+    // padding-left: 10px;
+    position: absolute;
+    top: 80px;
+    left: 25%;
 `;
 
 export const StyledFormButton = styled.button`
