@@ -1,0 +1,20 @@
+.br {
+    display: block;
+    margin-bottom: 0em;
+}
+  
+.min_br {
+    display: block;
+    margin-bottom: -0.8em;
+}
+
+.brmedium {
+    display: block;
+    margin-bottom: 1em;
+}
+  
+.brlarge {
+    display: block;
+    margin-bottom: 2em;
+}
+

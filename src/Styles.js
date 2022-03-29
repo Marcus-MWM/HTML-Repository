@@ -127,13 +127,31 @@ export const StyledFormArea = styled.div`
 export const StyledFormArea2 = styled.div`
     background-color: lightblue;
     text-align: center;
-    // width: 100%;
-    // height: 40px;
-    padding: 45px 55px;
-    // padding-left: 10px;
+    padding: 1px 55px;
     position: absolute;
     top: 80px;
-    left: 25%;
+    left: 42.5%;
+    font-size: 12px;
+`;
+
+export const StyledLabelChartRight1 = styled.div`
+    background-color: white;
+    // border-style: solid;
+    border-style: ${props => props.brand};
+    border-color: #66B3FF;
+    text-align: center;
+    // padding-left: 10px;
+    padding-left: ${props => props.sizeLeft}px;
+    // padding-right: 10px;
+    padding-right: ${props => props.sizeRight}px;
+    padding-top: ${(props) => props.size1}px;
+    padding-bottom: ${(props) => props.size2}px;
+    position: absolute;
+    // top: 180px;
+    top: ${(props) => props.sizeTop}px;
+    right: ${(props) => props.size}px;
+    font-size: 12px;
+    font-weight: bold;
 `;
 
 export const StyledFormButton = styled.button`
