@@ -10,6 +10,7 @@ import Dashboards from './pages/Dashboards';
 import Signup from "./pages/Signup";
 import Courses from "./pages/Courses";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer";
 // =======
 // import Home from './pages/Home'
 // import Login from './pages/Login'
@@ -63,7 +64,7 @@ function App() {
           {/* <Route path="/"><Home /></Route> */}
           
         </Switch>
-
+        <Footer/>
         {/* <Navbar/> */}
         {/* <Home/> */}
         {/* <Login/> */}
