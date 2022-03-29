@@ -22,14 +22,9 @@ import { connect } from "react-redux";
 import { loginUser } from "../auth/actions/userActions";
 import { useHistory } from "react-router-dom";
 
-import { initializeApp } from 'firebase/app';
+import { signInWithGoogle } from "../firebase/firebase";
+import { auth } from "../firebase/firebase";
 
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
-  //...
-};
-
-const app = initializeApp(firebaseConfig);
 
 const Login = ({loginUser}) => {
         const history = useHistory();
