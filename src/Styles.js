@@ -136,18 +136,17 @@ export const StyledFormArea2 = styled.div`
 
 export const StyledLabelChartRight1 = styled.div`
     background-color: white;
-    // border-style: solid;
+    background-color: ${props => props.colorStyle};
     border-style: ${props => props.brand};
     border-color: #66B3FF;
     text-align: center;
-    // padding-left: 10px;
+    padding-left: 10px;
     padding-left: ${props => props.sizeLeft}px;
-    // padding-right: 10px;
+    padding-right: 10px;
     padding-right: ${props => props.sizeRight}px;
     padding-top: ${(props) => props.size1}px;
     padding-bottom: ${(props) => props.size2}px;
     position: absolute;
-    // top: 180px;
     top: ${(props) => props.sizeTop}px;
     right: ${(props) => props.size}px;
     font-size: 12px;

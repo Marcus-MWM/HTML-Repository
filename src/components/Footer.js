@@ -6,7 +6,7 @@ function Footer() {
     return (
     <div className="footer"> 
         <div className="socialMedia"></div>
-        <p> &copy; 2022 </p> 
+        {/* <p> &copy; 2022 </p>  */}
     </div>
     );
 }
