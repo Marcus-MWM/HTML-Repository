@@ -131,7 +131,7 @@ const Courses = () =>{
               <p> and Calc I </p>
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {500} brand = "dotted" sizeTop = {180} size1 = {8} size2 = {8}>
+            <StyledLabelChartRight1 size = {1300} brand = "dotted" sizeTop = {180} size1 = {8} size2 = {8}>
               <p> EGR 182 (4) * </p>
               <span class="min_br"></span>
               <p>  Intro Math for </p>
