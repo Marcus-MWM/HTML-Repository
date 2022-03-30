@@ -166,6 +166,8 @@ const Courses = () =>{
         </StyledContainer>
           {/* <StyledFormArea2>
             <h1> Courses Page!!! </h1>
+          <StyledFormArea2>
+            <h1> Courses Page </h1>
           </StyledFormArea2>
 
 
@@ -274,7 +276,40 @@ const Courses = () =>{
               <span class="min_br"></span><p> Preparation
                  </p>
             </StyledLabelChartRight1> */}
+
+            <StyledLabelChartRight1 size = {700} brand = "dotted" sizeTop = {180} size1 = {8} size2 = {8}>
+              <p> PHY 201 (4) </p>
+              <span class="min_br"></span>
+              <p>  Phy for Engrs I </p>
+              <span class="min_br"></span>
+              <p> with Lab </p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {900} brand = "dotted" sizeTop = {180} size1 = {8} size2 = {8}>
+              <p> MAT 255 (4) </p>
+              <span class="min_br"></span>
+              <p>  Analytical Geometry </p>
+              <span class="min_br"></span>
+              <p> and Calc II </p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {1100} brand = "dotted" sizeTop = {180} size1 = {8} size2 = {8}>
+              <p> MAT 245 (4) </p>
+              <span class="min_br"></span>
+              <p>  Analytical Geometry </p>
+              <span class="min_br"></span>
+              <p> and Calc I </p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {1300} brand = "dotted" sizeTop = {180} size1 = {8} size2 = {8}>
+              <p> EGR 182 (4) * </p>
+              <span class="min_br"></span>
+              <p>  Intro Math for </p>
+              <span class="min_br"></span>
+              <p> Engr Appl </p>
+            </StyledLabelChartRight1>
             
+
       </div>
   );
 }
