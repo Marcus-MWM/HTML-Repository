@@ -17,13 +17,12 @@ import Beach from "../assests/beach.jpg"
 
 const Courses = () =>{
   return (
-      <div>
+      <div className="centered">
+        
         <StyledContainer image={Beach} sizeH = {150}>
         <StyledFormArea2>
-            <h1> Courses Page!!! </h1>
+            <h1> Courses </h1>
           </StyledFormArea2>
-
-
 
           <StyledLabelChartTop size = {20}
           sizeTop = {180} sizeLeft = {12} sizeRight = {12}>
@@ -171,55 +170,154 @@ const Courses = () =>{
           </StyledFormArea2>
          */}
 
-            <StyledLabelChartRight1 size = {700} brand = "dotted" sizeTop = {180} size1 = {8} size2 = {8}>
-              <p> PHY 201 (4) </p>
-              <span class="min_br"></span>
-              <p>  Phy for Engrs I </p>
-              <span class="min_br"></span>
-              <p> with Lab </p>
+          {/* Spring 4th Semester Courses */}
+
+            <StyledLabelChartTop size = {700}
+              sizeTop = {180} sizeLeft = {12} sizeRight = {12}>
+              <p>  4th Sem (Sprg) </p><span class="min_br"></span><p>  15 Credits </p>
+            </StyledLabelChartTop>
+
+            <StyledLabelChartTop size = {900}
+              sizeTop = {180} sizeLeft = {12} sizeRight = {12}>
+              <p>  3rd Sem (Fall) </p><span class="min_br"></span><p>  16 Credits </p>
+            </StyledLabelChartTop>
+
+            <StyledLabelChartTop size = {1100}
+              sizeTop = {180} sizeLeft = {12} sizeRight = {12}>
+              <p>  2nd Sem (Sprg) </p><span class="min_br"></span><p>  15 Credits </p>
+            </StyledLabelChartTop>
+
+            <StyledLabelChartTop size = {1300}
+              sizeTop = {180} sizeLeft = {12} sizeRight = {12}>
+              <p>  1st Sem (Fall) </p><span class="min_br"></span><p>  16 Credits </p>
+            </StyledLabelChartTop>
+
+            <StyledLabelChartRight1 size = {700} brand = "solid" 
+              sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {17} sizeRight = {17}>
+              <p> PHY 201 (4) </p><span class="min_br"></span><p>  Phy for Engrs I </p>
+              <span class="min_br"></span><p> with Lab </p>
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {900} brand = "dotted" sizeTop = {180} size1 = {8} size2 = {8}>
-              <p> MAT 255 (4) </p>
-              <span class="min_br"></span>
-              <p>  Analytical Geometry </p>
-              <span class="min_br"></span>
-              <p> and Calc II </p>
+            <StyledLabelChartRight1 size = {900} brand = "solid" 
+              sizeTop = {260} size1 = {5} size2 = {5} sizeLeft = {2} sizeRight = {1}>
+                <p> MAT 255 (4) </p><span class="min_br"></span><p>Analytical Geometry</p>
+                <span class="min_br"></span><p> and Calc II </p>
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {1100} brand = "dotted" sizeTop = {180} size1 = {8} size2 = {8}>
-              <p> MAT 245 (4) </p>
-              <span class="min_br"></span>
-              <p>  Analytical Geometry </p>
-              <span class="min_br"></span>
-              <p> and Calc I </p>
+            <StyledLabelChartRight1 size = {1100} brand = "solid" 
+              sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {5} sizeRight = {4}>
+                <p> MAT 245 (4) </p><span class="min_br"></span><p>  Analytical Geometry </p>
+                <span class="min_br"></span><p> and Calc I </p>
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {1300} brand = "dotted" sizeTop = {180} size1 = {8} size2 = {8}>
-              <p> EGR 182 (4) * </p>
-              <span class="min_br"></span>
-              <p>  Intro Math for </p>
-              <span class="min_br"></span>
-              <p> Engr Appl </p>
+            <StyledLabelChartRight1 size = {1300} brand = "solid" 
+              sizeTop = {260} size1 = {5} size2 = {5} sizeLeft = {15} sizeRight = {15}>
+                <p> EGR 182 (4) * </p><span class="min_br"></span><p>Intro Math for</p>
+                <span class="min_br"></span><p> Engr Appl </p>
             </StyledLabelChartRight1>
-            
 
+            <StyledLabelChartRight1 size = {700} brand = "dotted" 
+              sizeTop = {500} size1 = {15} size2 = {15} sizeLeft = {20} sizeRight = {25}>
+                <p> Approved  </p><span class="min_br"></span><p>Science (2)</p>
+                <span class="min_br"></span><p></p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {700} brand = "solid" 
+              sizeTop = {620} size1 = {5} size2 = {10} sizeLeft = {20} sizeRight = {20}>
+                <p> EGR 226 (3)  </p><span class="min_br"></span><p>OS and </p>
+                <span class="min_br"></span><p>Networking</p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {700} brand = "solid" 
+              sizeTop = {740} size1 = {5} size2 = {10} sizeLeft = {10} sizeRight = {10}>
+                <p> EGR 227 (3)  </p><span class="min_br"></span><p>Data Structures</p>
+                <span class="min_br"></span><p>and Analysis</p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {700} brand = "solid" 
+              sizeTop = {860} size1 = {5} size2 = {10} sizeLeft = {10} sizeRight = {10}>
+                <p> EGR 223 (3)  </p><span class="min_br"></span><p>Software Engr</p>
+                <span class="min_br"></span><p>Approach to HCI</p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {900} brand = "solid" 
+              sizeTop = {500} size1 = {10} size2 = {5} sizeLeft = {20} sizeRight = {20}>
+                <p> EGR 225 (3)  </p><span class="min_br"></span><p>Discrete</p>
+                <span class="min_br"></span><p>Structures I</p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {900} brand = "dotted" 
+              sizeTop = {620} size1 = {5} size2 = {5} sizeLeft = {20} sizeRight = {20}>
+                <p> Christian or  </p><span class="min_br"></span><p>Intercultural</p>
+                <span class="min_br"></span><p>Studies (3)</p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {900} brand = "solid" 
+              sizeTop = {740} size1 = {5} size2 = {10} sizeLeft = {20} sizeRight = {20}>
+                <p> EGR 222 (3) </p><span class="min_br"></span><p>Software</p>
+                <span class="min_br"></span><p>Engineering</p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {900} brand = "dotted" 
+              sizeTop = {860} size1 = {5} size2 = {5} sizeLeft = {20} sizeRight = {20}>
+                <p> WLD161, </p><span class="min_br"></span><p>History, or</p>
+                <span class="min_br"></span><p>Poly Sci (3)</p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {1100} brand = "solid" 
+              sizeTop = {380} size1 = {10} size2 = {10} sizeLeft = {20} sizeRight = {20}>
+                <p> EGR 102 (4) </p><span class="min_br"></span><p>Intro to Engr</p>
+                <span class="min_br"></span><p>Design</p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {1100} brand = "solid" 
+              sizeTop = {500} size1 = {10} size2 = {5} sizeLeft = {20} sizeRight = {20}>
+                <p> EGR 122 (3) </p><span class="min_br"></span><p>Visualization</p>
+                <span class="min_br"></span><p>Languages I</p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {1100} brand = "solid" 
+              sizeTop = {620} size1 = {15} size2 = {15} sizeLeft = {10} sizeRight = {15}>
+                <p> EGR 192 (1) </p><span class="min_br"></span><p>Engr Seminar I</p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {1100} brand = "dotted" 
+              sizeTop = {860} size1 = {5} size2 = {10} sizeLeft = {20} sizeRight = {20}>
+                <p> ENG 123 (3) </p><span class="min_br"></span><p>Intermediate</p>
+                <span class="min_br"></span><p>Composition</p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {1300} brand = "solid" 
+              sizeTop = {380} size1 = {10} size2 = {5} sizeLeft = {20} sizeRight = {20}>
+                <p> GST 100 (1) </p><span class="min_br"></span><p>First Year</p>
+                <span class="min_br"></span><p>Experience</p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {1300} brand = "solid" 
+              sizeTop = {500} size1 = {1} size2 = {1} sizeLeft = {20} sizeRight = {20}>
+                <p> EGR 101 (4) </p><span class="min_br"></span><p>Engr from</p>
+                <span class="min_br"></span><p>Christian</p><span class="min_br"></span>
+                <p> Worldview </p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {1300} brand = "solid" 
+              sizeTop = {620} size1 = {5} size2 = {10} sizeLeft = {15} sizeRight = {15}>
+                <p> EGR 121 (3) * </p><span class="min_br"></span><p>Intro to Comp</p>
+                <span class="min_br"></span><p>Prog in C++</p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {1300} brand = "solid" 
+              sizeTop = {740} size1 = {10} size2 = {10} sizeLeft = {10} sizeRight = {15}>
+                <p> EGR 103 (1) ** </p><span class="min_br"></span><p>Engr Service I</p>
+            </StyledLabelChartRight1>
+
+            <StyledLabelChartRight1 size = {1300} brand = "dotted" 
+              sizeTop = {860} size1 = {15} size2 = {15} sizeLeft = {15} sizeRight = {15}>
+                <p> ENG 113 (3) </p><span class="min_br"></span><p>Composition</p>
+            </StyledLabelChartRight1>
+        
       </div>
   );
 }
 
 export default Courses;
-
-
-// function Courses() {
-//   return (
-//     <>
-//       <Header text ='hello testing.... '/>
-//         <div>
-//           <h1> Welcome to the Courses Page </h1>
-//         </div>
-//     </>
-//   );
-// }
-
-// export default Courses;
