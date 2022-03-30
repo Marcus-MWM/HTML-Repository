@@ -24,6 +24,7 @@ import Footer from "./components/Footer";
 
 //styled components
 import StyledContainer from './Styles';
+import {StyledContainer1} from './Styles';
 
 // Loader
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -43,19 +44,14 @@ function App() {
       <StyledContainer image={Beach} >
         
         <Switch>
-        
-          {/* <Route path="/signup"> </Route> */}
+          <Route path="/courses"> <Courses /> </Route>
           <Route path="/signup"> <Signup /> </Route>
           <Route path="/login"> <Login/> </Route>
           <Route path="/dashboards"> <Dashboards /> </Route>
-          <Route path="/courses"> <Courses /> </Route>
           <Route path="/about"> <About /> </Route>
           <StyledContainer image={Wood} size={207}>
-            <Route path="/">
-              <Home />
-            </Route>
+            <Route path="/"><Home /></Route>
           </StyledContainer>
-          {/* <Route path="/"><Home /></Route> */}
           
         </Switch>
         <Footer/>

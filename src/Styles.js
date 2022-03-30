@@ -22,6 +22,7 @@ export const colors ={
 const StyledContainer = styled.div`
     margin: 0;
     min-height: 100vh;
+    min-height: ${(props) => props.sizeH}vh;
     min-width: ${(props) => props.size}vh;
     display: flex;
     justify-content: center;
@@ -29,9 +30,11 @@ const StyledContainer = styled.div`
     background: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${props => props.image});
     background-size: cover;
     background-attachment: fixed;
+    background-color: blue;
 `;
 
 export default StyledContainer;
+
 
 // Home
 export const StyledTitle = styled.h2`
@@ -150,6 +153,26 @@ export const StyledLabelChartRight1 = styled.div`
     top: ${(props) => props.sizeTop}px;
     right: ${(props) => props.size}px;
     font-size: 12px;
+    font-weight: bold;
+`;
+
+export const StyledLabelChartTop = styled.div`
+    background-color: white;
+    background-color: ${props => props.colorStyle};
+    border-style: ${props => props.brand};
+    border-color: #66B3FF;
+    text-align: center;
+    padding-left: 10px;
+    padding-left: ${props => props.sizeLeft}px;
+    padding-right: 10px;
+    padding-right: ${props => props.sizeRight}px;
+    padding-top: ${(props) => props.size1}px;
+    padding-bottom: ${(props) => props.size2}px;
+    position: absolute;
+    top: ${(props) => props.sizeTop}px;
+    right: ${(props) => props.size}px;
+    font-size: 14px;
+    color: blue;
     font-weight: bold;
 `;
 
