@@ -37,6 +37,7 @@ const Signup = ({signupUser}) => {
                 </StyledTitle>
                 <Formik
                     initialValues={{
+                        ID: "",
                         email: "",
                         password: "",
                         repeatPassword: "",
@@ -44,6 +45,12 @@ const Signup = ({signupUser}) => {
                         name: "",
                     }}
                     validationSchema={Yup.object({
+                        ID: Yup.string()
+                        .matches(/^[0-9]{6}?$/, " ")
+                        .required("Required"),
+                        test: Yup.string()
+                        .email("Invalid email address")
+                        .required("Requied"),
                         email: Yup.string()
                         .email("Invalid email address")
                         .required("Requied"),
@@ -54,9 +61,6 @@ const Signup = ({signupUser}) => {
                         .matches(/(?=.*[!@#$%^&*])/, " ")
                         .min(8, "Password is too short")
                         .max(12, "Password is too long")
-                        .required("Required"),
-                        ID: Yup.string()
-                        .matches(/^[0-9]{6}?$/, " ")
                         .required("Required"),
                         dateOfBirth: Yup.date().required("Required"),
                         repeatPassword: Yup.string().required("Required").

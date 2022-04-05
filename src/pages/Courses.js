@@ -1,6 +1,6 @@
 // courses page
 
-import React from "react"
+import React, { useState } from "react"
 import Header from "../components/Header"
 // styled components
 import StyledContainer, { StyledTextInput, StyledFormArea,
@@ -8,14 +8,77 @@ import StyledContainer, { StyledTextInput, StyledFormArea,
     StyledFormButton, StyledLabel, Avatar, 
     StyledTitle, colors, ButtonGroup, ExtraText,
     TextLink, CopyrightText, StyledLabelChartRight1,
-    StyledLabelChartTop } from "../Styles";
+    StyledLabelChartTop, StyledFormButton2 } from "../Styles";
 
 // courses page
 import "./Courses.css";
 
 import Beach from "../assests/beach.jpg"
+import { Formik, Form } from "formik";
+
+import { TextInput, TextInput2 } from "..//FormLib";
+import * as Yup from "yup";
+import styled from 'styled-components';
+
+import ReactDOM from "react-dom";
+
+const Button = styled.button`
+    &:hover{
+      background-color: #283593;
+    }
+    &:disabled {
+      opacity: 0.7;
+    }
+`;
+
+const ButtonToggle = styled(Button)`
+    opacity: 0.7;
+    ${({active}) => active && ` 
+      opacity: 1;
+    `}
+`;
+
+const valueButton = ['Cash', 'Money'];
+
+function ToggleGroup(){
+  const [active, setActive] = useState(valueButton[0]);
+  return <div>
+    {valueButton.map(type => (
+      <ButtonToggle 
+      active={active === type}
+      onClick={() => setActive(type)}
+      >
+        {type}
+      </ButtonToggle>
+    ))}
+  </div>
+}
 
 const Courses = () =>{
+
+  const [agree, setAgree] = useState(false);
+
+
+    const checkboxHandler = () => {
+      // if agree === true, it will be set to false
+      // if agree === false, it will be set to true
+      setAgree(!agree);
+      // Don't miss the exclamation mark
+    }
+
+    const checkboxHandlers = () => {
+      // if agree === true, it will be set to false
+      // if agree === false, it will be set to true
+      setAgree(!agree);
+      // Don't miss the exclamation mark
+    }
+
+  // When the button is clicked
+  const btnHandler = () => {
+    alert('The buttion is clickable!');
+  };
+
+
   return (
       <div className="centered">
         
@@ -33,12 +96,32 @@ const Courses = () =>{
               <p>  EGR 328 (2) </p><span class="min_br"></span><p>  Numerical </p>
               <span class="min_br"></span><p> Methods for </p><span class="min_br"></span>
               <p> Computing </p>
+              
+              
+
+              <button> TEST</button>
+              <Button> 
+                TSET ME 
+              </Button>
+              <ToggleGroup />
+              
+              <div>
+                <input type="checkbox" id="agree" onChange={checkboxHandler} />
+                <label htmlFor="agree"> I agree</label>
+              </div>
+
+                {/* Don't miss the exclamation mark* */}
+                <button disabled={!agree} className="btn" onClick={btnHandler}>
+                  Continue
+                </button>
+                <input type="checkbox" id="agree" disabled={!agree} onChange={checkboxHandler} />
+
             </StyledLabelChartRight1>
-            <StyledLabelChartRight1 size = {20} brand = "solid" 
+            {/* <StyledLabelChartRight1 size = {20} brand = "solid" 
             sizeTop = {380} size1 = {8} size2 = {8}>
               <p>  EGR 402 (3) </p><span class="min_br"></span><p>  Capstone Design </p>
               <span class="min_br"></span><p> (CSDS Section) </p>
-            </StyledLabelChartRight1>
+            </StyledLabelChartRight1> */}
             <StyledLabelChartRight1 size = {20} brand = "solid" 
             sizeTop = {500}  size1 = {8} size2 = {8} sizeLeft = {22} sizeRight = {22} colorStyle = "lightblue">
               <p>  CSC 412 (3) </p><span class="min_br"></span><p>  Intelligent </p>
