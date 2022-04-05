@@ -1,0 +1,8 @@
+open a new window in vscode then check branches and download using
+a link to the github repository
+
+when downloading the project use these commands in the terminal
+
+1. npm install
+
+? How to push to a different branch in github?
