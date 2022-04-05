@@ -10,13 +10,13 @@ import { Link } from 'react-router-dom';
         </div>
         <StyledTitle size={65}>
 {/* <<<<<<< HEAD */}
-          Welcome to Course Planner
+          Zeek's Page
 {/* ======= */}
 {/* //           Welcome to our Course Web App!
 // >>>>>>> ea2547606c351235f097f38fa17e3019c3de049d */}
         </StyledTitle>
         <StyledSubTitle size={27}>
-          Feel free to explore our page
+          Feel free to test the authentication and backend here
         </StyledSubTitle>
   
         <ButtonGroup>
@@ -26,8 +26,6 @@ import { Link } from 'react-router-dom';
             </Link> */}
             Login
           </StyledButton>
-
-          <StyledButton to="/Zeek">test</StyledButton>
 
           <StyledButton to="/signup">
             {/* <Link to='./components/Signup/'>
