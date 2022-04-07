@@ -54,100 +54,29 @@ function ToggleGroup(){
   </div>
 }
 
-
-
 const Courses = () =>{
 
-  const [agree, setAgree] = useState([]);
-  // const [agree, setAgree] = useState(false);
-  const [EGR_401, test_Agree] = useState(false);
-  const [EGR_302, EGR_302_A] = useState(false);
-  const [EGR_305, EGR_305_A] = useState(false);
-  const [EGR_329, EGR_329_A] = useState(false);
-  const [CSC_311, CSC_311_A] = useState(false);
-  const [PHY_201, PHY_201_A] = useState(false);
-  const [agrees, testAgree] = useState(false);
-  const menuItems = ["EGR305",2,3,4,5];
+  const [agree, setAgree] = useState(false);
 
-    const checkboxHandler = (event) => {
-      // setAgree(!agree);
-      var updatedList = [...agree];
 
-      if(event.target.checked){
-        updatedList = [...agree, event.target.value];
-      } else{
-        updatedList.splice(agree.indexOf(event.target.value), 1);
-
-      }
-
-      if(agree.indexOf(event.target.value) === "EGR302"){
-        updatedList = [...agree, event.target.value + " nom"];
-      }
-
-      if(event.target.value === "one"){
-        setAgree(!agree);
-      }
-      else if(event.target.value === "EGR401"){
-        test_Agree(!EGR_401);
-      } else if(event.target.value === "EGR302"){
-        EGR_302_A(!EGR_302);
-      } else if(event.target.value === "EGR305"){
-        EGR_305_A(!EGR_305);
-      } else if(event.target.value === "EGR329"){
-        EGR_329_A(!EGR_329);
-      } else if(event.target.value === "CSC311"){
-        CSC_311_A(!CSC_311);
-      } else if(event.target.value === "PHY201"){
-        PHY_201_A(!PHY_201);
-      }
-      setAgree(updatedList);
-      
+    const checkboxHandler = () => {
+      // if agree === true, it will be set to false
+      // if agree === false, it will be set to true
+      setAgree(!agree);
+      // Don't miss the exclamation mark
     }
-    const checkedItm = agree.length
-    ? agree.reduce((total, item) => {
-        return total + ", " + item;
-      })
-    : "";
-
-    // const checkboxHandler = () => {
-    //   setAgree(!agree);
-    // }
 
     const checkboxHandlers = () => {
-      testAgree(!agrees);
+      // if agree === true, it will be set to false
+      // if agree === false, it will be set to true
+      setAgree(!agree);
+      // Don't miss the exclamation mark
     }
 
   // When the button is clicked
   const btnHandler = () => {
     alert('The buttion is clickable!');
   };
-
-  const [checked, setChecked] = useState([]);
-  const checkList = ["Apple", "Banana", "Tea", "Coffee"];
-
-  // Add/Remove checked item from list
-  const handleCheck = (event) => {
-    var updatedList = [...checked];
-    if (event.target.checked && event.target.value === "Apple") {
-      updatedList = [...checked, event.target.value + " yes"];
-    } else if (event.target.checked) {
-      updatedList = [...checked, event.target.value];
-    } else {
-      updatedList.splice(checked.indexOf(event.target.value), 1);
-    }
-    setChecked(updatedList);
-  };
-
-  // Generate string of checked items
-  const checkedItems = checked.length
-    ? checked.reduce((total, item) => {
-        return total + ", " + item;
-      })
-    : "";
-
-  // Return classes based on whether item is checked
-  var isChecked = (item) =>
-    checked.includes(item) ? "checked-item" : "not-checked-item";
 
 
   return (
@@ -169,66 +98,46 @@ const Courses = () =>{
               <p> Computing </p>
               
               
+
+              <button> TEST</button>
+              <Button> 
+                TSET ME 
+              </Button>
+              <ToggleGroup />
               
-              {/* <div>
-                <input type="checkbox" value = "one" id="agree" onChange={checkboxHandler} />
+              <div>
+                <input type="checkbox" id="agree" onChange={checkboxHandler} />
                 <label htmlFor="agree"> I agree</label>
-              </div> */}
+              </div>
 
                 {/* Don't miss the exclamation mark* */}
-                {/* <button disabled={!agree} className="btn" onClick={btnHandler}>
+                <button disabled={!agree} className="btn" onClick={btnHandler}>
                   Continue
                 </button>
-                <input type="checkbox" id="agree" disabled={!agree} onChange={checkboxHandlers} /> */}
-
-                {/* {checkList.map((item, index) => (
-                  <div key={index}>
-                    <input value={item} type="checkbox" onChange={handleCheck} />
-                    <span className={isChecked(item)}>{item}</span>
-
-                  </div>
-                  
-                ))} */}
-
-                {/* <div>
-                  <input value="Apple" type="checkbox" onChange={handleCheck} />
-                </div> */}
-                <input value="Apple" type="checkbox" onChange={handleCheck} />
-
-                {/* {`Items checked are: ${checkedItems}`} */}
-                {/* {`Items checked are: ${checkedItm}`} */}
+                <input type="checkbox" id="agree" disabled={!agree} onChange={checkboxHandler} />
 
             </StyledLabelChartRight1>
-            <StyledLabelChartRight1 size = {20} brand = "solid" 
+            {/* <StyledLabelChartRight1 size = {20} brand = "solid" 
             sizeTop = {380} size1 = {8} size2 = {8}>
               <p>  EGR 402 (3) </p><span class="min_br"></span><p>  Capstone Design </p>
               <span class="min_br"></span><p> (CSDS Section) </p>
-
-              <input type="checkbox" value="EGR402" id="agree" disabled={!EGR_401} onChange={checkboxHandler} />
-            </StyledLabelChartRight1>
+            </StyledLabelChartRight1> */}
             <StyledLabelChartRight1 size = {20} brand = "solid" 
             sizeTop = {500}  size1 = {8} size2 = {8} sizeLeft = {22} sizeRight = {22} colorStyle = "lightblue">
               <p>  CSC 412 (3) </p><span class="min_br"></span><p>  Intelligent </p>
               <span class="min_br"></span><p> Systems </p>
-
-              <input type="checkbox" value="CSC412" id="agree" disabled={!EGR_305} onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {20} brand = "solid" 
             sizeTop = {620}  sizeLeft = {15} sizeRight = {15}>
               <p>  EGR 425 (3) </p><span class="min_br"></span><p>  Real Time and </p>
               <span class="min_br"></span><p> Embedded </p><span class="min_br"></span>
               <p> Development </p>
-
-                <input type="checkbox" value="EGR425" id="agree" disabled={!EGR_329} onChange={checkboxHandler} />
-
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {20} brand = "solid" 
             sizeTop = {740}  sizeLeft = {13} sizeRight = {13} colorStyle = "lightblue">
               <p>  CSC 411 (2) </p><span class="min_br"></span><p>  Social and Prof </p>
               <span class="min_br"></span><p> Issues in </p><span class="min_br"></span>
               <p> Computing </p>
-
-              <input type="checkbox" value="CSC411" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartTop size = {170}
           sizeTop = {180} sizeLeft = {15} sizeRight = {15}>
@@ -238,40 +147,32 @@ const Courses = () =>{
             sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {25} sizeRight = {25}>
               <p>  WLD161, </p><span class="min_br"></span><p>  History, or </p>
               <span class="min_br"></span><p> Poly Sci (3) </p>
-              <input type="checkbox" value="WLD161" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {170} brand = "solid" 
             sizeTop = {380} size1 = {8} size2 = {8}>
               <p>  EGR 401 (3) </p><span class="min_br"></span><p>  Capstone Design </p>
               <span class="min_br"></span><p> (CSDS Section) </p>
-
-              <input type="checkbox" value="EGR401" id="agree" disabled={!EGR_302} onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {170} brand = "solid" 
             sizeTop = {500} size1 = {8} size2 = {8} sizeLeft = {20} sizeRight = {20} colorStyle = "lightblue">
               <p>  CSC 414 (3) </p><span class="min_br"></span><p>  Theory of </p>
               <span class="min_br"></span><p> Computation </p>
-              <input type="checkbox" value="CSC414" id="agree" disabled={!CSC_311} onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {170} brand = "solid" 
             sizeTop =  {620}  size1 = {8} size2 = {8}>
               <p>  EGR 405 (1) </p><span class="min_br"></span><p>  Internship Report </p>
               <span class="min_br"></span><p> and Presentation </p>
-              <input type="checkbox" value="EGR405" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {170} brand = "solid" 
             sizeTop =  {740} sizeLeft = {12} sizeRight = {12} colorStyle = "lightblue">
               <p>  CSC 413 (3) </p><span class="min_br"></span><p>  Info Security and </p>
               <span class="min_br"></span><p> Computer </p><span class="min_br"></span>
               <p> Forensics </p>
-              <input type="checkbox" value="CSC413" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {170} brand = "solid" 
             sizeTop =  {860} size1 = {25} size2 = {25} sizeLeft = {20} sizeRight = {20} colorStyle = "lightgrey">
               <p>  Elective(s) (4) </p>
-              <input type="checkbox" value="Ele" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
-
             <StyledLabelChartTop size = {330}
           sizeTop = {180} sizeLeft = {12} sizeRight = {12}>
               <p>  6th Sem (Sprg) </p><span class="min_br"></span><p>  17 Credits </p>
@@ -280,43 +181,33 @@ const Courses = () =>{
             sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {23} sizeRight = {23}>
               <p>  Christian or </p><span class="min_br"></span><p>  Intercultural </p>
               <span class="min_br"></span><p> Studies (3) </p>
-
-              <input type="checkbox" value="CIS" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {330} brand = "solid" 
             sizeTop = {380} sizeLeft = {12} sizeRight = {12}>
               <p>  EGR 302 (3) </p><span class="min_br"></span><p>  Engr Design and </p>
               <span class="min_br"></span><p> Documentation </p><span class="min_br"></span>
               <p> (CSDS Section) </p>
-
-              <input type="checkbox" value="EGR302" id="agree" disabled={!EGR_305} onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {330} brand = "solid" 
             sizeTop = {500} size1 = {8} size2 = {8} sizeLeft = {24} sizeRight = {24}>
               <p>  EGR 304 (1) </p><span class="min_br"></span><p>  Leadership </p>
               <span class="min_br"></span><p> Cohort </p>
-              <input type="checkbox" value="EGR304" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {330} brand = "solid" 
             sizeTop = {620} size1 = {15} size2 = {15} sizeLeft = {24} sizeRight = {24}>
               <p>  CSC 312 (3) </p><span class="min_br"></span><p>  Algorithms </p>
-              <input type="checkbox" value="CSC312" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {330} brand = "solid" 
             sizeTop = {740} size1 = {8} size2 = {8} sizeLeft = {9} sizeRight = {9} 
             colorStyle = "lightblue">
               <p>  CSC 313 (3) </p><span class="min_br"></span><p>  Graphics and </p>
               <span class="min_br"></span><p>  Visual Computing </p>
-              <input type="checkbox" value="CSC313" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {330} brand = "solid" 
             sizeTop = {860} size1 = {8} size2 = {8} sizeLeft = {24} sizeRight = {24}>
               <p>  EGR 325 (3) </p><span class="min_br"></span><p>  Database </p>
               <span class="min_br"></span><p>  Systems </p>
-              <input type="checkbox" value="EGR325" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
-
-
             <StyledLabelChartTop size = {500}
           sizeTop = {180} sizeLeft = {15} sizeRight = {15}>
               <p>  5th Sem (Fall) </p><span class="min_br"></span><p>  17 Credits </p>
@@ -325,40 +216,32 @@ const Courses = () =>{
             sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {17} sizeRight = {17}>
               <p> PHY 203 (4) </p><span class="min_br"></span><p> Phy for Engrs II </p>
               <span class="min_br"></span><p> with Lab </p>
-              <input type="checkbox" value="PHY203" id="agree" disabled={!PHY_201} onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {500} brand = "solid" 
             sizeTop = {380} size1 = {8} size2 = {8} sizeLeft = {25} sizeRight = {25}>
               <p> EGR 305 (2) </p><span class="min_br"></span> <p>  Engineering </p>
               <span class="min_br"></span><p> Statistics </p>
-
-              <input type="checkbox" value="EGR305" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {500} brand = "solid" 
             sizeTop = {500} size1 = {8} size2 = {8} sizeLeft = {25} sizeRight = {25}>
               <p> EGR 306 (1) </p><span class="min_br"></span> <p>  Internship </p>
               <span class="min_br"></span><p> Preparation </p>
-              <input type="checkbox" value="EGR306" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {500} brand = "solid" 
             sizeTop = {620} size1 = {8} size2 = {8} sizeLeft = {25} sizeRight = {25}>
               <p> EGR 329 (3) </p><span class="min_br"></span> <p>  Computer </p>
               <span class="min_br"></span><p> Architecture </p>
-
-              <input type="checkbox" value="EGR329" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {500} brand = "solid" 
             sizeTop = {740} size1 = {8} size2 = {8} sizeLeft = {15} sizeRight = {15}
              colorStyle = "lightblue">
               <p> CSC 311 (3) </p><span class="min_br"></span> <p>  Compiler Design</p>
               <span class="min_br"></span><p> and Languages </p>
-              <input type="checkbox" value="CSC311" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {500} brand = "solid" 
             sizeTop = {860} size1 = {8} size2 = {8} sizeLeft = {26} sizeRight = {26}>
               <p> EGR 324 (3) </p><span class="min_br"></span> <p> Engineering</p>
               <span class="min_br"></span><p> Economics </p>
-              <input type="checkbox" value="EGR324" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             
 
@@ -396,8 +279,6 @@ const Courses = () =>{
               sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {17} sizeRight = {17}>
               <p> PHY 201 (4) </p><span class="min_br"></span><p>  Phy for Engrs I </p>
               <span class="min_br"></span><p> with Lab </p>
-
-              <input type="checkbox" value="PHY201" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
             <StyledLabelChartRight1 size = {900} brand = "solid" 
@@ -517,7 +398,6 @@ const Courses = () =>{
               sizeTop = {860} size1 = {15} size2 = {15} sizeLeft = {15} sizeRight = {15}>
                 <p> ENG 113 (3) </p><span class="min_br"></span><p>Composition</p>
             </StyledLabelChartRight1>
-            <p>{`Items checked are: ${checkedItm}`}</p>
         
       </div>
   );
