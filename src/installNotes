@@ -3,7 +3,8 @@ a link to the github repository
 
 when downloading the project use these commands in the terminal
 
-1. npm install
+1.  npm install
+2.  npm install -g firebase-tools
 
 ? How to push to a different branch in github?
 
