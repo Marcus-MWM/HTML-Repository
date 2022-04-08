@@ -36,7 +36,6 @@
 // const auth = getAuth();
 // export default getFirestore();
 
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -46,13 +45,13 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCglg2FlNituv_mTNBeOkbW_iWvq4JstVw",
-  authDomain: "student-account-49f41.firebaseapp.com",
-  projectId: "student-account-49f41",
-  storageBucket: "student-account-49f41.appspot.com",
-  messagingSenderId: "733651407729",
-  appId: "1:733651407729:web:f241296595b44408c81cd0",
-  measurementId: "G-8R0KE4000V"
+  apiKey: "AIzaSyDN2px-MFqjOSz3EJ7XbcI4D1_zMx0UYeQ",
+  authDomain: "fir-fin-d5446.firebaseapp.com",
+  projectId: "fir-fin-d5446",
+  storageBucket: "fir-fin-d5446.appspot.com",
+  messagingSenderId: "800334292763",
+  appId: "1:800334292763:web:b09daf52d193714baa15be",
+  measurementId: "G-KEVJJLB2CY"
 };
 
 // Initialize Firebase
