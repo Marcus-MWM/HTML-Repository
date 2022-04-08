@@ -2,37 +2,37 @@ import { StyledTitle, StyledSubTitle, StyledButton, ButtonGroup } from "../Style
 import { Link } from 'react-router-dom';
 
 // import firebase from "firebase/app";
-import firebase from "../firebase/firebase";
-import "firebase/firestore";
+// import firebase from "./firebase/firebase";
+// import "firebase/firestore";
 
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
-const firebaseConfig = {
-    // ...
-    apiKey: "AIzaSyDN2px-MFqjOSz3EJ7XbcI4D1_zMx0UYeQ",
-    authDomain: "fir-fin-d5446.firebaseapp.com",
-    projectId: "fir-fin-d5446",
-    storageBucket: "fir-fin-d5446.appspot.com",
-    messagingSenderId: "800334292763",
-    appId: "1:800334292763:web:b09daf52d193714baa15be",
-    measurementId: "G-KEVJJLB2CY"
-};
+// const firebaseConfig = {
+//     // ...
+//     apiKey: "AIzaSyDN2px-MFqjOSz3EJ7XbcI4D1_zMx0UYeQ",
+//     authDomain: "fir-fin-d5446.firebaseapp.com",
+//     projectId: "fir-fin-d5446",
+//     storageBucket: "fir-fin-d5446.appspot.com",
+//     messagingSenderId: "800334292763",
+//     appId: "1:800334292763:web:b09daf52d193714baa15be",
+//     measurementId: "G-KEVJJLB2CY"
+// };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+// firebase.initializeApp(firebaseConfig);
 
 
 // Initialize Cloud Firestore and get a reference to the service
-const db = firebase.firestore();
+// const db = firebase.firestore();
 
-db.collection("users").get().then((querySnapshot) => {
-  querySnapshot.forEach((doc) => {
-  console.log(`${doc.id} => ${doc.data()}`);
-    });
-});
+// db.collection("users").get().then((querySnapshot) => {
+//   querySnapshot.forEach((doc) => {
+//   console.log(`${doc.id} => ${doc.data()}`);
+//     });
+// });
 
 
-  const Home = () => {
+  const Zeek = () => {
     return (
       <div>
         <div>
@@ -72,4 +72,4 @@ db.collection("users").get().then((querySnapshot) => {
     );
   }
   
-  // export default Zeek;
+  export default Zeek;
