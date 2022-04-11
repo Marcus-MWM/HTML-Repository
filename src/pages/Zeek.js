@@ -1,5 +1,6 @@
 import { StyledTitle, StyledSubTitle, StyledButton, ButtonGroup } from "../Styles";
 import { Link } from 'react-router-dom';
+// import firebase from './fbConfig';
 
 // import firebase from "firebase/app";
 // import firebase from "./firebase/firebase";
