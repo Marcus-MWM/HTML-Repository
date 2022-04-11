@@ -8,7 +8,7 @@ import StyledContainer, { StyledTextInput, StyledFormArea,
     StyledFormButton, StyledLabel, Avatar, 
     StyledTitle, colors, ButtonGroup, ExtraText,
     TextLink, CopyrightText, StyledLabelChartRight1,
-    StyledLabelChartTop, StyledFormButton2 } from "../Styles";
+    StyledLabelChartTop, StyledFormButton2, StyledLabelChartBottom, StyledBottomBox } from "../Styles";
 
 // courses page
 import "./Courses.css";
@@ -87,7 +87,6 @@ const Courses = () =>{
         updatedList.splice(agree.indexOf(event.target.value), 1);
       }
 
-
       if(event.target.value === "one"){
         setAgree(!agree);
       }
@@ -143,7 +142,6 @@ const Courses = () =>{
       }
 
       setAgree(updatedList);
-      
     }
     const checkedItm = agree.length
     ? agree.reduce((total, item) => {
@@ -195,7 +193,7 @@ const Courses = () =>{
   return (
       <div className="centered">
         
-        <StyledContainer image={Beach} sizeH = {150}>
+        <StyledContainer image={Beach} sizeH = {155}>
         <StyledFormArea2>
             <h1> Courses </h1>
           </StyledFormArea2>
@@ -277,7 +275,7 @@ const Courses = () =>{
           sizeTop = {180} sizeLeft = {15} sizeRight = {15}>
               <p>  7th Sem (Fall) </p><span class="min_br"></span><p>  17 Credits </p>
             </StyledLabelChartTop>
-            <StyledLabelChartRight1 size = {170} brand = "dashed" 
+            <StyledLabelChartRight1 size = {170} brand = "dashed" colorStyle = {"cyan"}
             sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {25} sizeRight = {25}>
               <p>  WLD161, </p><span class="min_br"></span><p>  History, or </p>
               <span class="min_br"></span><p> Poly Sci (3) </p>
@@ -319,7 +317,7 @@ const Courses = () =>{
           sizeTop = {180} sizeLeft = {12} sizeRight = {12}>
               <p>  6th Sem (Sprg) </p><span class="min_br"></span><p>  17 Credits </p>
             </StyledLabelChartTop>
-            <StyledLabelChartRight1 size = {330} brand = "dashed" 
+            <StyledLabelChartRight1 size = {330} brand = "dashed" colorStyle = {"cyan"}
             sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {23} sizeRight = {23}>
               <p>  Christian or </p><span class="min_br"></span><p>  Intercultural </p>
               <span class="min_br"></span><p> Studies (3) </p>
@@ -499,7 +497,7 @@ const Courses = () =>{
                 <input type="checkbox" value="EGR225" id="agree"onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {900} brand = "dotted" 
+            <StyledLabelChartRight1 size = {900} brand = "dashed" colorStyle = {"cyan"}
               sizeTop = {620} size1 = {5} size2 = {5} sizeLeft = {20} sizeRight = {20}>
                 <p> Christian or  </p><span class="min_br"></span><p>Intercultural</p>
                 <span class="min_br"></span><p>Studies (3)</p>
@@ -513,7 +511,7 @@ const Courses = () =>{
                 <input type="checkbox" value="EGR222" id="agree" disabled={!EGR_121} onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {900} brand = "dotted" 
+            <StyledLabelChartRight1 size = {900} brand = "dashed" colorStyle = {"cyan"} 
               sizeTop = {860} size1 = {5} size2 = {5} sizeLeft = {20} sizeRight = {20}>
                 <p> WLD161, </p><span class="min_br"></span><p>History, or</p>
                 <span class="min_br"></span><p>Poly Sci (3)</p>
@@ -540,14 +538,14 @@ const Courses = () =>{
                 <input type="checkbox" value="EGR192" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {1100} brand = "dotted" 
+            <StyledLabelChartRight1 size = {1100} brand = "dashed" colorStyle = {"cyan"}
               sizeTop = {860} size1 = {5} size2 = {10} sizeLeft = {20} sizeRight = {20}>
                 <p> ENG 123 (3) </p><span class="min_br"></span><p>Intermediate</p>
                 <span class="min_br"></span><p>Composition</p>
                 <input type="checkbox" value="ENG 123" id="agree" disabled={!ENG_113} onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {1300} brand = "solid" 
+            <StyledLabelChartRight1 size = {1300} brand = "dashed" colorStyle = {"cyan"} 
               sizeTop = {380} size1 = {10} size2 = {5} sizeLeft = {20} sizeRight = {20}>
                 <p> GST 100 (1) </p><span class="min_br"></span><p>First Year</p>
                 <span class="min_br"></span><p>Experience</p>
@@ -575,13 +573,47 @@ const Courses = () =>{
                 <input type="checkbox" value="EGR103" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {1300} brand = "dotted" 
+            <StyledLabelChartRight1 size = {1300} brand = "dashed" colorStyle = {"cyan"}
               sizeTop = {860} size1 = {15} size2 = {15} sizeLeft = {15} sizeRight = {15}>
                 <p> ENG 113 (3) </p><span class="min_br"></span><p>Composition</p>
                 <input type="checkbox" value="ENG113" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
-            <p>{`Items checked are: ${checkedItm}`}</p>
-            {/* </StyledContainer> */}
+            {/* <p>{`Items checked are: ${checkedItm}`}</p> */}
+
+
+            {/* <StyledLabelChartBottom>
+              <p>{`Items checked are: ${checkedItm}`}</p>
+            </StyledLabelChartBottom> */}
+            <StyledLabelChartBottom>
+              <p>General Education: </p>
+            </StyledLabelChartBottom>
+            <StyledBottomBox brand = {"dashed"} colorS = {"cyan"}>
+            </StyledBottomBox>
+            <StyledLabelChartBottom size = {32.5}>
+              <p>Unique to Computer Science: </p>
+            </StyledLabelChartBottom>
+            <StyledBottomBox size = {43.2} colorS = {"lightblue"} lengthS = {23}>
+            </StyledBottomBox>
+            <StyledLabelChartBottom size = {52.5} sizeR = {60}>
+              <p>Requirement (not a course): </p>
+            </StyledLabelChartBottom>
+            <StyledBottomBox size = {67} colorS = {"lightgray"} lengthS = {23}>
+            </StyledBottomBox>
+            <StyledLabelChartBottom size = {73.5} sizeR = {20}>
+              <p>Course offered only in specified semster: </p>
+            </StyledLabelChartBottom>
+            <StyledBottomBox size = {85.5} brand = {"solid"}>
+            </StyledBottomBox>
+            <StyledLabelChartBottom sizeR = {50} sizeB = {450}>
+              <p>Course offered only in both Fail and Spring: </p>
+            </StyledLabelChartBottom>
+            <StyledBottomBox size = {26.5} lengthS = {23} sizeB = {450} colorS = {"orange"}>
+            </StyledBottomBox>
+            <StyledLabelChartBottom size = {73.5} sizeR = {50} sizeB = {450}>
+              <p>Course offered only in both Fail and Spring: </p>
+            </StyledLabelChartBottom>
+            <StyledBottomBox size = {87.5} brand = {"dashed"} sizeB = {450}>
+            </StyledBottomBox>
         
       </div>
   );

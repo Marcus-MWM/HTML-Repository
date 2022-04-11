@@ -179,6 +179,37 @@ export const StyledLabelChartRight1 = styled.div`
     font-weight: bold;
 `;
 
+export const StyledLabelChartBottom = styled.div`
+    background-color: white;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: ${props => props.sizeR}px;
+    width: 200px;
+    position: absolute;
+    bottom: -350px;
+    bottom: -${props => props.sizeB}px;
+    left: 12.5%;
+    left: ${props => props.size}%;
+    font-size: 16px;
+`;
+
+export const StyledBottomBox = styled.div`
+    background-color: gray;
+    background-color: ${props => props.colorS};
+    // border-style: dashed;
+    border-style: ${props => props.brand};
+    border-color: #66B3FF;
+    text-align: center;
+    padding: 20px 20px;
+    padding: ${props => props.lengthS}px ${props => props.lengthS}px;
+    position: absolute;
+    bottom: -350px;
+    bottom: -${props => props.sizeB}px;
+    left: 22.5%;
+    left: ${props => props.size}%;
+    font-size: 16px;
+`;
+
 export const StyledLabelChartTop = styled.div`
     background-color: white;
     background-color: ${props => props.colorStyle};
