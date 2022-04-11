@@ -1,23 +1,12 @@
 import { StyledTitle, StyledSubTitle, StyledButton, ButtonGroup } from "../Styles";
 import { Link } from 'react-router-dom';
+import { collection, getDocs } from "firebase/firestore"; 
+
 // import firebase from './fbConfig';
 
 // import firebase from "firebase/app";
 // import firebase from "./firebase/firebase";
 // import "firebase/firestore";
-
-// TODO: Replace the following with your app's Firebase project configuration
-// See: https://firebase.google.com/docs/web/learn-more#config-object
-// const firebaseConfig = {
-//     // ...
-//     apiKey: "AIzaSyDN2px-MFqjOSz3EJ7XbcI4D1_zMx0UYeQ",
-//     authDomain: "fir-fin-d5446.firebaseapp.com",
-//     projectId: "fir-fin-d5446",
-//     storageBucket: "fir-fin-d5446.appspot.com",
-//     messagingSenderId: "800334292763",
-//     appId: "1:800334292763:web:b09daf52d193714baa15be",
-//     measurementId: "G-KEVJJLB2CY"
-// };
 
 // Initialize Firebase
 // firebase.initializeApp(firebaseConfig);
@@ -25,6 +14,15 @@ import { Link } from 'react-router-dom';
 
 // Initialize Cloud Firestore and get a reference to the service
 // const db = firebase.firestore();
+
+/**
+ * DATE 4/10/22
+ *  TODO: make the following lines work
+ */
+// const querySnapshot = await getDocs(collection(db, "users"));
+// querySnapshot.forEach((doc) => {
+//   console.log(`${doc.id} => ${doc.data()}`);
+// });
 
 // db.collection("users").get().then((querySnapshot) => {
 //   querySnapshot.forEach((doc) => {
