@@ -2,7 +2,7 @@ import { StyledTitle, StyledSubTitle, StyledButton,
         ButtonGroup, StyledFormArea, colors } from "../Styles";
 import { Link } from 'react-router-dom';
   
-  const Dashboards = () => {
+  const Dashboard = () => {
     return (
       <div>
         <div>
@@ -24,4 +24,4 @@ import { Link } from 'react-router-dom';
     );
   }
   
-  export default Dashboards;
+  export default Dashboard;

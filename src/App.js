@@ -5,7 +5,7 @@
 // Pages
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Dashboards from './pages/Dashboards';
+import Dashboard from './pages/Dashboard';
 import Signup from "./pages/Signup";
 import Courses from "./pages/Courses";
 import Navbar from "./components/Navbar/Navbar";
@@ -47,7 +47,7 @@ function App() {
           <Route path="/courses"> <Courses /> </Route>
           <Route path="/signup"> <Signup /> </Route>
           <Route path="/login"> <Login/> </Route>
-          <Route path="/dashboards"> <Dashboards /> </Route>
+          <Route path="/dashboard"> <Dashboard /> </Route>
           <Route path="/about"> <About /> </Route>
           <StyledContainer image={Wood} size={207}>
             <Route path="/"><Home /></Route>

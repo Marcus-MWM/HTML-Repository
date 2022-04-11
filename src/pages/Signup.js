@@ -50,10 +50,10 @@ const Signup = ({signupUser}) => {
                         .required("Required"),
                         test: Yup.string()
                         .email("Invalid email address")
-                        .required("Requied"),
+                        .required("Required"),
                         email: Yup.string()
                         .email("Invalid email address")
-                        .required("Requied"),
+                        .required("Required"),
                         password: Yup.string()
                         .matches(/(?=.*[a-z])/, " ")
                         .matches(/(?=.*[A-Z])/, " ")
@@ -76,7 +76,7 @@ const Signup = ({signupUser}) => {
                             <TextInput
                                 name="ID"
                                 type="text"
-                                label="StudentID"
+                                label="Student ID"
                                 icon={<FiUser />}
                             />
                             <TextInput
