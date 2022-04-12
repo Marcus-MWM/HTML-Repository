@@ -11,7 +11,6 @@ import Signup from "./pages/Signup";
 import Courses from "./pages/Courses";
 import Navbar from "./components/Navbar/Navbar";
 import About from './pages/About';
-
 import Footer from "./components/Footer";
 // =======
 // import Home from './pages/Home'
@@ -29,22 +28,23 @@ import {StyledContainer1} from './Styles';
 
 // Loader
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-
 import Beach from '././assests/beach.jpg';
 import Wood from '././assests/bg.jpg';
 
-import {
-  BrowserRouter as Router,
-  Switch, Route
-} from 'react-router-dom';
+// import {useState, useEffect} from "react";
+// import {collection, getDocs, addDoc} from "firebase/firestore"; 
+// import {db} from './firebase/firebase';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { async } from '@firebase/util';
 
 function App() {
   return (
-    <Router>
+    <div className="App">
+    <Routes>
       <Navbar />
       <StyledContainer image={Beach} >
         
-        <Switch>
+        <Routes>
           <Route path="/courses"> <Courses /> </Route>
           <Route path="/signup"> <Signup /> </Route>
           <Route path="/login"> <Login/> </Route>
@@ -54,7 +54,7 @@ function App() {
             <Route path="/"><Home /></Route>
           </StyledContainer>
           
-        </Switch>
+        </Routes>
         <Footer/>
         {/* <Navbar/> */}
         {/* <Home/> */}
@@ -62,7 +62,8 @@ function App() {
         {/* <Dashboards /> */}
 
       </StyledContainer>
-    </Router>
+    </Routes>
+    </div>
   );
 }
 

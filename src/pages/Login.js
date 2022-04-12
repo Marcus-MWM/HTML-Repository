@@ -1,4 +1,9 @@
 import React, { Component }  from 'react';
+import {useState} from 'react'
+// import {Link, useHistory} from 'react-router-dom'
+import {ReactComponent as ArrowRightIcon} from '../assets/svg/keyboardArrowRightIcon.svg'
+import visibilityIcon from '../asserts/svg/visibilityIcon.svg'
+import { Link } from 'react-router-dom';
 // styled components
 import { StyledTextInput, StyledFormArea, 
     StyledFormButton, StyledLabel, Avatar, 
@@ -21,90 +26,85 @@ import {ThreeDots} from 'react-loader-spinner';
 // auth & redux
 import { connect } from "react-redux";
 import { loginUser } from "../auth/actions/userActions";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 import { signInWithGoogle } from "../firebase/firebase";
 import { auth } from "../firebase/firebase";
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = ({loginUser}) => {
-        const history = useHistory();
-        const emailAddress = [
-            'test@gmail.com',
-        ];
+    const [showPassword, setPassword] = useState(false)
+    const [formData, setFormData] = useState({
+        email:'',
+        password:'',
+    })
+    const onChange = (e) => {
+        setFormData((prevState) => ({
+            ...prevState,
+            [e.target.id]: e.target.value
+        }))
+    }
+    const {email, password} = formData
+    
     return (
-        <div>
-            <StyledFormArea>
-                <Avatar image={Logo} />
-                <StyledTitle color={colors.theme} size={30}>
-                    Login
-                </StyledTitle>
-                <Formik
-                    initialValues={{
-                        email: "",
-                        password: "",
-                    }}
-                    validationSchema={Yup.object({
-                        email: Yup.string()
-                        .email("Invalid email address")
-                        .oneOf(emailAddress, " ")
-                        .required("Requied"),
-                        password: Yup.string()
-                        .min(8, "Password is too short")
-                        .max(30, "Password is too long")
-                        .required("Required"),
-                    })}
-                    onSubmit={(values, {setSubmitting, setFieldError}) => {
-                        console.log(values);
-                        loginUser(values, history, setFieldError, setSubmitting);
-                    }}
-                >
-                    {({isSubmitting}) => (
-                        <Form>
-                            <TextInput
-                                name="email"
-                                type="text"
-                                label="Email Address"
-                                placeholder="olga1@example.com"
-                                icon={<FiMail />}
+        <>
+            <div className="pageContainer">
+                <header>
+                    <p className="pageHeader">
+                        Welcome Back!
+                    </p>
+                </header>
+                    <form>
+                        <input 
+                            type="email" 
+                            className="emailInput" 
+                            placeholder="Email" 
+                            id='email' 
+                            value={email}
+                            onChange={onChange}
+                        />
+
+                        <div className="passwordInputDiv">
+                            <input 
+                                type={showPassword ? 'text' : 'password'}  
+                                className='passwordInput' 
+                                placeholder="Password"
+                                id="password" 
+                                value={password}
+                                onChange={onChange}
                             />
 
-                            <TextInput
-                                name="password"
-                                type="password"
-                                label="Password"
-                                placeholder="********"
-                                icon={<FiLock />}
+                            <img 
+                                src={visibilityIcon} 
+                                alt="show password" 
+                                className="showPassword" 
+                                onClick={() => setShowPassword((prevState) => 
+                                !prevState)} />
+                        </div>
 
-                                
-                            />
-                            <ButtonGroup>
-                                {!isSubmitting && (
-                                    <StyledFormButton type="submit">
-                                        Login
-                                    </StyledFormButton>
-                                )}
+                        <Link to='/forgot-password' 
+                            className='forgotPasswordLink'>
+                                Forgot Password
+                        </Link>
 
-                                {isSubmitting && (
-                                    <ThreeDots
-                                    color={colors.theme}
-                                    height={49}
-                                    width={100}                                
-                                />
-                                )}
-                            </ButtonGroup>
-                        </Form>
-                    )}
-                </Formik>
-                <ExtraText>
-                    New here? <TextLink to="/signup">Signup</TextLink>
-                </ExtraText>
-            </StyledFormArea>
-            <CopyrightText>
-                All rights reserved &copy;2022
-            </CopyrightText>
-        </div>
-    );
-};
+                        <div className="signInBar">
+                            <p className="signInText">
+                                Sign In
+                            </p>
+                            <button className="signInButton">
+                                <ArrowRightIcon fill='#ffffff' width='34px'
+                                height='34px' />
+                            </button>
+                        </div>
+                    </form>
+                 {/* Google OAuth */}
+                 <Link to='/signup' className='registerLink'>
+                     Sign Up Instead
+                 </Link>
+            </div>
+        </>
+    )
+}
 
-export default connect(null, {loginUser})(Login);
+export default Login
