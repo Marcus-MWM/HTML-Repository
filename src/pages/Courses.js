@@ -276,7 +276,8 @@ const Courses = () =>{
               <p>  7th Sem (Fall) </p><span class="min_br"></span><p>  17 Credits </p>
             </StyledLabelChartTop>
             <StyledLabelChartRight1 size = {170} brand = "dashed" colorStyle = {"cyan"}
-            sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {25} sizeRight = {25}>
+            sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {25} sizeRight = {25}
+            colorB = {"orange"}>
               <p>  WLD161, </p><span class="min_br"></span><p>  History, or </p>
               <span class="min_br"></span><p> Poly Sci (3) </p>
               <input type="checkbox" value="WLD161" id="agree" onChange={checkboxHandler} />
@@ -307,7 +308,7 @@ const Courses = () =>{
               <p> Forensics </p>
               <input type="checkbox" value="CSC413" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
-            <StyledLabelChartRight1 size = {170} brand = "solid" 
+            <StyledLabelChartRight1 size = {170} brand = "solid" colorB = {"orange"}
             sizeTop =  {860} size1 = {25} size2 = {25} sizeLeft = {20} sizeRight = {20} colorStyle = "lightgrey">
               <p>  Elective(s) (4) </p>
               <input type="checkbox" value="Ele" id="agree" onChange={checkboxHandler} />
@@ -318,7 +319,8 @@ const Courses = () =>{
               <p>  6th Sem (Sprg) </p><span class="min_br"></span><p>  17 Credits </p>
             </StyledLabelChartTop>
             <StyledLabelChartRight1 size = {330} brand = "dashed" colorStyle = {"cyan"}
-            sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {23} sizeRight = {23}>
+            sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {23} sizeRight = {23}
+            colorB = {"orange"}>
               <p>  Christian or </p><span class="min_br"></span><p>  Intercultural </p>
               <span class="min_br"></span><p> Studies (3) </p>
 
@@ -338,7 +340,7 @@ const Courses = () =>{
               <span class="min_br"></span><p> Cohort </p>
               <input type="checkbox" value="EGR304" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
-            <StyledLabelChartRight1 size = {330} brand = "solid" 
+            <StyledLabelChartRight1 size = {330} brand = "solid" colorB = {"orange"}
             sizeTop = {620} size1 = {15} size2 = {15} sizeLeft = {24} sizeRight = {24}>
               <p>  CSC 312 (3) </p><span class="min_br"></span><p>  Algorithms </p>
               <input type="checkbox" value="CSC312" id="agree" onChange={checkboxHandler} />
@@ -362,13 +364,13 @@ const Courses = () =>{
           sizeTop = {180} sizeLeft = {15} sizeRight = {15}>
               <p>  5th Sem (Fall) </p><span class="min_br"></span><p>  17 Credits </p>
             </StyledLabelChartTop>
-            <StyledLabelChartRight1 size = {500} brand = "dotted" 
+            <StyledLabelChartRight1 size = {500} brand = "dotted" colorB = {"orange"}
             sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {17} sizeRight = {17}>
               <p> PHY 203 (4) </p><span class="min_br"></span><p> Phy for Engrs II </p>
               <span class="min_br"></span><p> with Lab </p>
               <input type="checkbox" value="PHY203" id="agree" disabled={!PHY_201} onChange={checkboxHandler} />
             </StyledLabelChartRight1>
-            <StyledLabelChartRight1 size = {500} brand = "solid" 
+            <StyledLabelChartRight1 size = {500} brand = "solid" colorB = {"orange"}
             sizeTop = {380} size1 = {8} size2 = {8} sizeLeft = {25} sizeRight = {25}>
               <p> EGR 305 (2) </p><span class="min_br"></span> <p>  Engineering </p>
               <span class="min_br"></span><p> Statistics </p>
@@ -395,23 +397,14 @@ const Courses = () =>{
               <span class="min_br"></span><p> and Languages </p>
               <input type="checkbox" value="CSC311" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
-            <StyledLabelChartRight1 size = {500} brand = "solid" 
+            <StyledLabelChartRight1 size = {500} brand = "solid" colorB = {"orange"}
             sizeTop = {860} size1 = {8} size2 = {8} sizeLeft = {26} sizeRight = {26}>
               <p> EGR 324 (3) </p><span class="min_br"></span> <p> Engineering</p>
               <span class="min_br"></span><p> Economics </p>
               <input type="checkbox" value="EGR324" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             
-            </StyledContainer>
-        
-          {/* <StyledFormArea2>
-            <h1> Courses Page!!! </h1>
-          <StyledFormArea2>
-            <h1> Courses Page </h1>
-          </StyledFormArea2>
-         */}
-
-          {/* Spring 4th Semester Courses */}
+            
 
             <StyledLabelChartTop size = {700}
               sizeTop = {180} sizeLeft = {12} sizeRight = {12}>
@@ -433,7 +426,7 @@ const Courses = () =>{
               <p>  1st Sem (Fall) </p><span class="min_br"></span><p>  16 Credits </p>
             </StyledLabelChartTop>
 
-            <StyledLabelChartRight1 size = {700} brand = "solid" 
+            <StyledLabelChartRight1 size = {700} brand = "dotted" colorB = {"orange"}
               sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {17} sizeRight = {17}>
               <p> PHY 201 (4) </p><span class="min_br"></span><p>  Phy for Engrs I </p>
               <span class="min_br"></span><p> with Lab </p>
@@ -441,28 +434,28 @@ const Courses = () =>{
               <input type="checkbox" value="PHY201" id="agree" disabled={!EGR_182} onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {900} brand = "solid" 
+            <StyledLabelChartRight1 size = {900} brand = "dotted" colorB = {"orange"}
               sizeTop = {260} size1 = {5} size2 = {5} sizeLeft = {2} sizeRight = {1}>
                 <p> MAT 255 (4) </p><span class="min_br"></span><p>Analytical Geometry</p>
                 <span class="min_br"></span><p> and Calc II </p>
                 <input type="checkbox" value="MAT255" id="agree" disabled={!MAT_245} onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {1100} brand = "solid" 
+            <StyledLabelChartRight1 size = {1100} brand = "dotted" colorB = {"orange"}
               sizeTop = {260} size1 = {8} size2 = {8} sizeLeft = {5} sizeRight = {4}>
                 <p> MAT 245 (4) </p><span class="min_br"></span><p>  Analytical Geometry </p>
                 <span class="min_br"></span><p> and Calc I </p>
                 <input type="checkbox" value="MAT245" id="agree" disabled={!EGR_182} onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {1300} brand = "solid" 
+            <StyledLabelChartRight1 size = {1300} brand = "solid" colorB = {"orange"}
               sizeTop = {260} size1 = {5} size2 = {5} sizeLeft = {15} sizeRight = {15}>
                 <p> EGR 182 (4) * </p><span class="min_br"></span><p>Intro Math for</p>
                 <span class="min_br"></span><p> Engr Appl </p>
                 <input type="checkbox" value="EGR182" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {700} brand = "dotted" 
+            <StyledLabelChartRight1 size = {700} brand = "dotted" colorB = {"orange"}
               sizeTop = {500} size1 = {15} size2 = {15} sizeLeft = {20} sizeRight = {25}>
                 <p> Approved  </p><span class="min_br"></span><p>Science (2)</p>
                 <span class="min_br"></span><p></p>
@@ -498,13 +491,14 @@ const Courses = () =>{
             </StyledLabelChartRight1>
 
             <StyledLabelChartRight1 size = {900} brand = "dashed" colorStyle = {"cyan"}
-              sizeTop = {620} size1 = {5} size2 = {5} sizeLeft = {20} sizeRight = {20}>
+              sizeTop = {620} size1 = {5} size2 = {5} sizeLeft = {20} sizeRight = {20}
+              colorB = {"orange"}>
                 <p> Christian or  </p><span class="min_br"></span><p>Intercultural</p>
                 <span class="min_br"></span><p>Studies (3)</p>
                 <input type="checkbox" value="CIS" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {900} brand = "solid" 
+            <StyledLabelChartRight1 size = {900} brand = "solid" colorB = {"orange"}
               sizeTop = {740} size1 = {5} size2 = {10} sizeLeft = {20} sizeRight = {20}>
                 <p> EGR 222 (3) </p><span class="min_br"></span><p>Software</p>
                 <span class="min_br"></span><p>Engineering</p>
@@ -512,7 +506,8 @@ const Courses = () =>{
             </StyledLabelChartRight1>
 
             <StyledLabelChartRight1 size = {900} brand = "dashed" colorStyle = {"cyan"} 
-              sizeTop = {860} size1 = {5} size2 = {5} sizeLeft = {20} sizeRight = {20}>
+              sizeTop = {860} size1 = {5} size2 = {5} sizeLeft = {20} sizeRight = {20}
+              colorB = {"orange"}>
                 <p> WLD161, </p><span class="min_br"></span><p>History, or</p>
                 <span class="min_br"></span><p>Poly Sci (3)</p>
                 <input type="checkbox" value="WLD161" id="agree" onChange={checkboxHandler} />
@@ -525,28 +520,30 @@ const Courses = () =>{
                 <input type="checkbox" value="EGR102" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {1100} brand = "solid" 
+            <StyledLabelChartRight1 size = {1100} brand = "solid" colorB = {"orange"}
               sizeTop = {500} size1 = {10} size2 = {5} sizeLeft = {20} sizeRight = {20}>
                 <p> EGR 122 (3) </p><span class="min_br"></span><p>Visualization</p>
                 <span class="min_br"></span><p>Languages I</p>
                 <input type="checkbox" value="EGR122" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {1100} brand = "solid" 
+            <StyledLabelChartRight1 size = {1100} brand = "solid" colorB = {"orange"}
               sizeTop = {620} size1 = {15} size2 = {15} sizeLeft = {10} sizeRight = {15}>
                 <p> EGR 192 (1) </p><span class="min_br"></span><p>Engr Seminar I</p>
                 <input type="checkbox" value="EGR192" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
             <StyledLabelChartRight1 size = {1100} brand = "dashed" colorStyle = {"cyan"}
-              sizeTop = {860} size1 = {5} size2 = {10} sizeLeft = {20} sizeRight = {20}>
+              sizeTop = {860} size1 = {5} size2 = {10} sizeLeft = {20} sizeRight = {20}
+              colorB = {"orange"}>
                 <p> ENG 123 (3) </p><span class="min_br"></span><p>Intermediate</p>
                 <span class="min_br"></span><p>Composition</p>
                 <input type="checkbox" value="ENG 123" id="agree" disabled={!ENG_113} onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
             <StyledLabelChartRight1 size = {1300} brand = "dashed" colorStyle = {"cyan"} 
-              sizeTop = {380} size1 = {10} size2 = {5} sizeLeft = {20} sizeRight = {20}>
+              sizeTop = {380} size1 = {10} size2 = {5} sizeLeft = {20} sizeRight = {20}
+              colorB = {"orange"}>
                 <p> GST 100 (1) </p><span class="min_br"></span><p>First Year</p>
                 <span class="min_br"></span><p>Experience</p>
                 <input type="checkbox" value="GST100" id="agree" onChange={checkboxHandler} />
@@ -561,20 +558,22 @@ const Courses = () =>{
             </StyledLabelChartRight1>
 
             <StyledLabelChartRight1 size = {1300} brand = "solid" 
-              sizeTop = {620} size1 = {5} size2 = {10} sizeLeft = {15} sizeRight = {15}>
+              sizeTop = {620} size1 = {5} size2 = {10} sizeLeft = {15} sizeRight = {15}
+              colorB = {"orange"}>
                 <p> EGR 121 (3) * </p><span class="min_br"></span><p>Intro to Comp</p>
                 <span class="min_br"></span><p>Prog in C++</p>
                 <input type="checkbox" value="EGR121" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
-            <StyledLabelChartRight1 size = {1300} brand = "solid" 
+            <StyledLabelChartRight1 size = {1300} brand = "solid" colorB = {"orange"}
               sizeTop = {740} size1 = {10} size2 = {10} sizeLeft = {10} sizeRight = {15}>
                 <p> EGR 103 (1) ** </p><span class="min_br"></span><p>Engr Service I</p>
                 <input type="checkbox" value="EGR103" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
 
             <StyledLabelChartRight1 size = {1300} brand = "dashed" colorStyle = {"cyan"}
-              sizeTop = {860} size1 = {15} size2 = {15} sizeLeft = {15} sizeRight = {15}>
+              sizeTop = {860} size1 = {15} size2 = {15} sizeLeft = {15} sizeRight = {15} 
+              colorB = {"orange"}>
                 <p> ENG 113 (3) </p><span class="min_br"></span><p>Composition</p>
                 <input type="checkbox" value="ENG113" id="agree" onChange={checkboxHandler} />
             </StyledLabelChartRight1>
@@ -607,13 +606,16 @@ const Courses = () =>{
             <StyledLabelChartBottom sizeR = {50} sizeB = {450}>
               <p>Course offered only in both Fail and Spring: </p>
             </StyledLabelChartBottom>
-            <StyledBottomBox size = {26.5} lengthS = {23} sizeB = {450} colorS = {"orange"}>
+            <StyledBottomBox size = {26.5} sizeB = {450} brand = {"solid"} colorB = {"orange"}>
             </StyledBottomBox>
             <StyledLabelChartBottom size = {73.5} sizeR = {50} sizeB = {450}>
               <p>Course offered only in both Fail and Spring: </p>
             </StyledLabelChartBottom>
             <StyledBottomBox size = {87.5} brand = {"dashed"} sizeB = {450}>
             </StyledBottomBox>
+
+
+            </StyledContainer>
         
       </div>
   );

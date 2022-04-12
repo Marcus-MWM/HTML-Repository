@@ -165,6 +165,7 @@ export const StyledLabelChartRight1 = styled.div`
     background-color: ${props => props.colorStyle};
     border-style: ${props => props.brand};
     border-color: #66B3FF;
+    border-color: ${props => props.colorB};
     text-align: center;
     padding-left: 10px;
     padding-left: ${props => props.sizeLeft}px;
@@ -199,6 +200,7 @@ export const StyledBottomBox = styled.div`
     // border-style: dashed;
     border-style: ${props => props.brand};
     border-color: #66B3FF;
+    border-color: ${props => props.colorB};
     text-align: center;
     padding: 20px 20px;
     padding: ${props => props.lengthS}px ${props => props.lengthS}px;
