@@ -1,8 +1,10 @@
+import React from 'react';
 import {useField} from 'formik';
 import {
     StyledTextInput,
     StyledLabel
 } from "./Styles";
+
 
 export const TextInput = ({...props}) => {
     const [field, meta] = useField(props);

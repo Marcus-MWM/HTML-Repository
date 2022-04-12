@@ -1,3 +1,5 @@
+import React, { Component }  from 'react';
+
 // styled components
 import { StyledTextInput, StyledFormArea, 
     StyledFormButton, StyledLabel, Avatar, 

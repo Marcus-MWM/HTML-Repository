@@ -1,5 +1,6 @@
 import { red } from '@material-ui/core/colors';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 function Header(props) {
     const headerStyles = {

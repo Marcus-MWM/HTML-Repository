@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 // import React from 'react';
 // import './App.css';
 // import Home from './components/Home';
@@ -9,7 +10,7 @@ import Dashboard from './pages/Dashboard';
 import Signup from "./pages/Signup";
 import Courses from "./pages/Courses";
 import Navbar from "./components/Navbar/Navbar";
-import About from './pages/About'
+import About from './pages/About';
 
 import Footer from "./components/Footer";
 // =======

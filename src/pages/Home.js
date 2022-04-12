@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 import { StyledTitle, StyledSubTitle, StyledButton, ButtonGroup } from "../Styles";
 import { Link } from 'react-router-dom';
 
