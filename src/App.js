@@ -32,6 +32,9 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 function App() {
   return (
     <>
+    <div style={{ backgroundImage:`url(${Wood})`, backgroundSize:"cover", width: '100vw', height: '100vh'}}>
+
+      
       <Router>
       <Navbar/>
         <Routes>
@@ -46,7 +49,7 @@ function App() {
         </Routes> 
         
       </Router>
-      
+      </div>
     </>
   )
 }

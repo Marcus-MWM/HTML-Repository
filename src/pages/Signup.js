@@ -17,7 +17,7 @@ function Signup () {
         password:'',
     })
     const {name, email, password} = formData
-    //const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const onChange = (e) => {
         setFormData((prevState) => ({

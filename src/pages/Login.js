@@ -16,9 +16,9 @@ function Login () {
         password:'',
     })
     const {email, password} = formData
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
-    const onChange = async (e) => {
+    const onChange = (e) => {
         setFormData((prevState) => ({
           ...prevState,
           [e.target.id]: e.target.value,
