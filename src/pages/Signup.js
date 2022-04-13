@@ -1,61 +1,37 @@
 import React, { Component }  from 'react';
-import {useState} from 'react'
-// import {Link, useHistory} from 'react-router-dom'
-
-import {ReactComponent as ArrowRightIcon} from '../assests/svg/keyboardArrowRightIcon.svg'
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+// import { toast } from 'react-toastify'
+//import { getAuth, createUserWithEmailAndPassword, updateProfile, } from 'firebase/auth'
+import { setDoc, doc, serverTimestamp } from 'firebase/firestore'
+//import { db } from '../firebase/firebase'
+// import OAuth from '../components/OAuth'
+import { ReactComponent as ArrowRightIcon } from '../assests/svg/keyboardArrowRightIcon.svg'
 import visibilityIcon from '../assests/svg/visibilityIcon.svg'
 
-import { Link } from 'react-router-dom';
-// styled components
-import { StyledTextInput, StyledFormArea, 
-    StyledFormButton, StyledLabel, Avatar, 
-    StyledTitle, colors, ButtonGroup, ExtraText,
-    TextLink, CopyrightText } from "../Styles";
-
-import Logo from './../assests/grad_logo.png';
-
-// formik
-import { Formik, Form } from "formik";
-import { TextInput } from "..//FormLib";
-import * as Yup from "yup";
-
-//icons
-import {FiMail, FiLock} from 'react-icons/fi';
-
-// Loader
-import {ThreeDots} from 'react-loader-spinner';
-
-// auth & redux
-import { connect } from "react-redux";
-import { loginUser } from "../auth/actions/userActions";
-// import { useHistory } from "react-router-dom";
-
-import { signInWithGoogle } from "../firebase/firebase";
-import { auth } from "../firebase/firebase";
-import { useNavigate } from 'react-router-dom';
-
-
 function Signup () {
-    const [showPassword, setPassword] = useState(false)
+    const [showPassword, setShowPassword] = useState(false)
     const [formData, setFormData] = useState({
         name: '',
         email:'',
         password:'',
     })
+    const {name, email, password} = formData
+    //const navigate = useNavigate()
+
     const onChange = (e) => {
         setFormData((prevState) => ({
-            ...prevState,
-            [e.target.id]: e.target.value
+          ...prevState,
+          [e.target.id]: e.target.value,
         }))
-    }
-    const {name, email, password} = formData
+      }
     
     return (
         <>
             <div className="pageContainer">
                 <header>
                     <p className="pageHeader">
-                        Welcome!
+                        Create an Account
                     </p>
                 </header>
                     <form>
@@ -90,7 +66,7 @@ function Signup () {
                                 src={visibilityIcon} 
                                 alt="show password" 
                                 className="showPassword" 
-                                onClick={() => setPassword((prevState) => 
+                                onClick={() => setShowPassword((prevState) => 
                                 !prevState)} />
                         </div>
 
@@ -110,7 +86,7 @@ function Signup () {
                         </div>
                     </form>
                  {/* Google OAuth */}
-                 <Link to='/sign-in' className='registerLink'>
+                 <Link to='/login' className='registerLink'>
                      Sign In Instead
                  </Link>
             </div>

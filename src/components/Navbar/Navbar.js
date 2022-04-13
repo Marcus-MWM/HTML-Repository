@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { MenuItems } from "./MenuItems"
 import './Navbar.css'
 import {Button} from "../Button"
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
     state = {clicked: false}
@@ -31,9 +32,11 @@ class Navbar extends Component {
                     })}
                 </ul>
                 {/* Look into */}
-                <Button> 
-                    Sign Up
-                </Button>
+                <Link to='./signup'>
+                    <Button> 
+                        Sign Up!
+                    </Button>
+                </Link>
             </nav>
         )
     }
