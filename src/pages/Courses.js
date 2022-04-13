@@ -195,7 +195,7 @@ const Courses = () =>{
         
         <StyledContainer image={Beach} sizeH = {155}>
         <StyledFormArea2>
-            <h1> Courses </h1>
+            <h1> Computer Science Course List </h1>
           </StyledFormArea2>
 
           <StyledLabelChartTop size = {20}

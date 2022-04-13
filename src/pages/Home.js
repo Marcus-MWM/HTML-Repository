@@ -27,6 +27,13 @@ import { Link } from 'react-router-dom';
             Login
           </StyledButton>
 
+          <StyledButton to="/multi_course">
+            {/* <Link to='./pages/Login'>
+              Login
+            </Link> */}
+            Multi-Course
+          </StyledButton>
+
           <StyledButton to="/signup">
             {/* <Link to='./components/Signup/'>
               Signup

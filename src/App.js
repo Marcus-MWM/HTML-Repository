@@ -10,6 +10,7 @@ import Signup from "./pages/Signup";
 import Courses from "./pages/Courses";
 import Navbar from "./components/Navbar/Navbar";
 import About from './pages/About'
+import Multi_Course from './pages/Multi_Course';
 
 import Footer from "./components/Footer";
 // =======
@@ -49,6 +50,7 @@ function App() {
           <Route path="/login"> <Login/> </Route>
           <Route path="/dashboards"> <Dashboards /> </Route>
           <Route path="/about"> <About /> </Route>
+          <Route path="/multi_course"> <Multi_Course /> </Route>
           <StyledContainer image={Wood} size={207}>
             <Route path="/"><Home /></Route>
           </StyledContainer>
