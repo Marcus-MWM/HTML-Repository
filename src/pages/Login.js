@@ -1,8 +1,8 @@
 import React, { Component }  from 'react';
 import {useState} from 'react'
 // import {Link, useHistory} from 'react-router-dom'
-import {ReactComponent as ArrowRightIcon} from '../assets/svg/keyboardArrowRightIcon.svg'
-import visibilityIcon from '../asserts/svg/visibilityIcon.svg'
+import {ReactComponent as ArrowRightIcon} from '../assests/svg/keyboardArrowRightIcon.svg'
+import visibilityIcon from '../assests/svg/visibilityIcon.svg'
 import { Link } from 'react-router-dom';
 // styled components
 import { StyledTextInput, StyledFormArea, 
@@ -77,10 +77,11 @@ const Login = ({loginUser}) => {
 
                             <img 
                                 src={visibilityIcon} 
-                                alt="show password" 
-                                className="showPassword" 
-                                onClick={() => setShowPassword((prevState) => 
-                                !prevState)} />
+                                alt='show password' 
+                                className='showPassword'
+                                onClick={() => setPassword((prevState) => 
+                                !prevState)} 
+                            />
                         </div>
 
                         <Link to='/forgot-password' 
