@@ -1,8 +1,10 @@
 import React, { Component }  from 'react';
 import {useState} from 'react'
 // import {Link, useHistory} from 'react-router-dom'
-import {ReactComponent as ArrowRightIcon} from '../assets/svg/keyboardArrowRightIcon.svg'
-import visibilityIcon from '../asserts/svg/visibilityIcon.svg'
+
+import {ReactComponent as ArrowRightIcon} from '../assests/svg/keyboardArrowRightIcon.svg'
+import visibilityIcon from '../assests/svg/visibilityIcon.svg'
+
 import { Link } from 'react-router-dom';
 // styled components
 import { StyledTextInput, StyledFormArea, 
@@ -53,7 +55,7 @@ function Signup () {
             <div className="pageContainer">
                 <header>
                     <p className="pageHeader">
-                        Welcome Back!
+                        Welcome!
                     </p>
                 </header>
                     <form>
@@ -88,7 +90,7 @@ function Signup () {
                                 src={visibilityIcon} 
                                 alt="show password" 
                                 className="showPassword" 
-                                onClick={() => setShowPassword((prevState) => 
+                                onClick={() => setPassword((prevState) => 
                                 !prevState)} />
                         </div>
 
@@ -99,17 +101,17 @@ function Signup () {
 
                         <div className="signUpBar">
                             <p className="signUpText">
-                                Sign In
+                                Sign Up
                             </p>
-                            <button className="signInButton">
+                            <button className="signUpButton">
                                 <ArrowRightIcon fill='#ffffff' width='34px'
                                 height='34px' />
                             </button>
                         </div>
                     </form>
                  {/* Google OAuth */}
-                 <Link to='/signup' className='registerLink'>
-                     Sign Up Instead
+                 <Link to='/sign-in' className='registerLink'>
+                     Sign In Instead
                  </Link>
             </div>
         </>

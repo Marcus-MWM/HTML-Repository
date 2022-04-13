@@ -3,6 +3,7 @@ import React, { Component }  from 'react';
 // import './App.css';
 // import Home from './components/Home';
 
+import { Navigate, Outlet } from 'react-router-dom';
 // Pages
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -11,16 +12,8 @@ import Signup from "./pages/Signup";
 import Courses from "./pages/Courses";
 import Navbar from "./components/Navbar/Navbar";
 import About from './pages/About';
-import Footer from "./components/Footer";
-// =======
-// import Home from './pages/Home'
-// import Login from './pages/Login'
-// import Dashboards from './pages/Dashboards'
-// import Signup from "./pages/Signup"
-// import Navbar from "./components/Navbar/Navbar"
-// import Courses from './pages/Courses'
-// import About from './pages/About'
-// >>>>>>> 445e8e7021df8aad1d8d1f8f5c1a29babbba6d34
+// import Footer from "./components/Footer";
+import ForgotPassword from './pages/ForgotPassword'
 
 //styled components
 import StyledContainer from './Styles';
@@ -34,37 +27,27 @@ import Wood from '././assests/bg.jpg';
 // import {useState, useEffect} from "react";
 // import {collection, getDocs, addDoc} from "firebase/firestore"; 
 // import {db} from './firebase/firebase';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import { async } from '@firebase/util';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-    <Routes>
-      <Navbar />
-      <StyledContainer image={Beach} >
-        
+    <>
+      <Router>
+      <Navbar/>
         <Routes>
-          <Route path="/courses"> <Courses /> </Route>
-          <Route path="/signup"> <Signup /> </Route>
-          <Route path="/login"> <Login/> </Route>
-          <Route path="/dashboard"> <Dashboard /> </Route>
-          <Route path="/about"> <About /> </Route>
-          <StyledContainer image={Wood} size={207}>
-            <Route path="/"><Home /></Route>
-          </StyledContainer>
-          
-        </Routes>
-        <Footer/>
-        {/* <Navbar/> */}
-        {/* <Home/> */}
-        {/* <Login/> */}
-        {/* <Dashboards /> */}
-
-      </StyledContainer>
-    </Routes>
-    </div>
-  );
+          <Route path='/courses' element={<Courses/>} />
+          <Route path='/signup' element={<Signup/>} />
+          <Route path='/login' element={<Login/>} />
+          <Route path='/dashboard' element={<Dashboard/>} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/forgot-password' element={<ForgotPassword/>} />
+          <Route path='/' element={<Home/>} />
+        </Routes> 
+        
+      </Router>
+      
+    </>
+  )
 }
 
 export default App;
