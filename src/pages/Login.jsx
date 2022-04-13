@@ -1,10 +1,9 @@
-import React  from 'react';
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 // import { toast } from 'react-toastify'
-// import {getAuth, createUserWithEmailAndPassword, updateProfile, } from 'firebase/auth'
+import {getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { setDoc, doc, serverTimestamp } from 'firebase/firestore'
-import { db } from '../firebase/firebase'
+import { db } from '../firebase-config'
 // import OAuth from '../components/OAuth'
 import { ReactComponent as ArrowRightIcon } from '../assests/svg/keyboardArrowRightIcon.svg'
 import visibilityIcon from '../assests/svg/visibilityIcon.svg'
@@ -25,6 +24,19 @@ function Login () {
         }))
       }
     
+    const onSubmit = async (e) => {
+        e.preventDefault()
+
+        try {
+            const auth = getAuth()
+            const userCredential = await signInWithEmailAndPassword(auth, email, password)
+            if(userCredential.user) {
+                navigate('/')
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
     
       return (
         <>
@@ -33,7 +45,7 @@ function Login () {
               <p className='pageHeader'>Welcome Back!</p>
             </header>
     
-            <form>
+            <form onSubmit={onSubmit}>
               <input
                 type='email'
                 className='emailInput'

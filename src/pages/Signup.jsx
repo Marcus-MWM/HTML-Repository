@@ -1,15 +1,14 @@
-import React, { Component }  from 'react';
-import { useState } from 'react'
+import React, { useState, useEffect }  from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 // import { toast } from 'react-toastify'
-//import { getAuth, createUserWithEmailAndPassword, updateProfile, } from 'firebase/auth'
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { setDoc, doc, serverTimestamp } from 'firebase/firestore'
-//import { db } from '../firebase/firebase'
+import { db } from '../firebase-config'
 // import OAuth from '../components/OAuth'
 import { ReactComponent as ArrowRightIcon } from '../assests/svg/keyboardArrowRightIcon.svg'
 import visibilityIcon from '../assests/svg/visibilityIcon.svg'
 
-function Signup () {
+function Signup() {
     const [showPassword, setShowPassword] = useState(false)
     const [formData, setFormData] = useState({
         name: '',
@@ -26,6 +25,26 @@ function Signup () {
         }))
       }
     
+    
+    const onSubmit = async (e) => {
+        e.preventDefault()
+
+        try {
+            const auth = getAuth()
+            
+            const userCredential = await createUserWithEmailAndPassword (auth, email, password)
+
+            const user = userCredential.user
+
+            updateProfile(auth.currentUser, {
+                displayName: name
+            })
+
+            navigate('/')
+        } catch (error) {
+            console.log(error);
+        }
+    }
     return (
         <>
             <div className="pageContainer">
@@ -34,7 +53,7 @@ function Signup () {
                         Create an Account
                     </p>
                 </header>
-                    <form>
+                    <form onSubmit={onSubmit}>
                         <input 
                             type='text'
                             className='nameInput' 
