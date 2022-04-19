@@ -19,12 +19,12 @@ function Signup() {
     const navigate = useNavigate()
 
     const onChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.id]: e.target.value,
-          })}
-    
-    
+        setFormData((prevState) => ({
+          ...prevState,
+          [e.target.id]: e.target.value,
+        }))
+    }
+
     const onSubmit = async (e) => {
         e.preventDefault()
 

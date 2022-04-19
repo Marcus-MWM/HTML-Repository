@@ -18,10 +18,11 @@ function Login () {
     const navigate = useNavigate()
 
     const onChange = (e) => {
-      setFormData({
-        ...formData,
+      setFormData((prevState) => ({
+        ...prevState,
         [e.target.id]: e.target.value,
-      })}
+      }))
+    }
     
     const onSubmit = async (e) => {
         e.preventDefault()
