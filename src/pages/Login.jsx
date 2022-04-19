@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {toast} from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
 // import { toast } from 'react-toastify'
 import {getAuth, signInWithEmailAndPassword } from 'firebase/auth'
@@ -7,6 +8,7 @@ import { db } from '../firebase-config'
 // import OAuth from '../components/OAuth'
 import { ReactComponent as ArrowRightIcon } from '../assests/svg/keyboardArrowRightIcon.svg'
 import visibilityIcon from '../assests/svg/visibilityIcon.svg'
+import Profile from './Profile'
 
 function Login () {
     const [showPassword, setShowPassword] = useState(false)
@@ -34,7 +36,7 @@ function Login () {
                 navigate('/')
             }
         } catch (error) {
-            console.log(error);
+            toast.error('Bad User Credentials')
         }
     }
     

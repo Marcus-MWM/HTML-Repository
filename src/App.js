@@ -12,9 +12,11 @@ import Signup from "./pages/Signup";
 import Courses from "./pages/Courses";
 import Navbar from "./components/Navbar/Navbar";
 import About from './pages/About';
+import Profile from './pages/Profile';
 // import Footer from "./components/Footer";
 import ForgotPassword from './pages/ForgotPassword'
-
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 //styled components
 import StyledContainer from './Styles';
 import {StyledContainer1} from './Styles';
@@ -43,12 +45,14 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/dashboard' element={<Dashboard/>} />
           <Route path='/about' element={<About/>} />
+          <Route path='/profile' element={<Profile/>} />
           <Route path='/forgot-password' element={<ForgotPassword/>} />
           <Route path='/' element={<Home/>} />
           
         </Routes> 
         
       </Router>
+      <ToastContainer/>
       </div>
     </>
   )

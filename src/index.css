@@ -30,6 +30,8 @@ button {
 .passwordInput,
 .emailInput,
 .nameInput,
+.idInput,
+.undergradOrGradInput,
 .textarea {
   box-shadow: rgba(0, 0, 0, 0.11);
   border: none;
@@ -47,6 +49,8 @@ button {
   .passwordInput,
   .emailInput,
   .nameInput,
+  .idInput,
+  .undergradOrGradInput,
   .textarea {
     padding: 0 5rem;
   }
@@ -191,6 +195,16 @@ button {
 }
 
 .emailInput {
+  margin-bottom: 2rem;
+  background: url('./assests/svg/personIcon.svg') #ffffff 2.5% center no-repeat;
+}
+
+.idInput {
+  margin-bottom: 2rem;
+  background: url('./assests/svg/personIcon.svg') #ffffff 2.5% center no-repeat;
+}
+
+.undergradOrGradInput {
   margin-bottom: 2rem;
   background: url('./assests/svg/personIcon.svg') #ffffff 2.5% center no-repeat;
 }

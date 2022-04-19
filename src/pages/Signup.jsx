@@ -1,4 +1,5 @@
 import React, { useState, useEffect }  from 'react';
+import { toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom'
 // import { toast } from 'react-toastify'
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
@@ -13,9 +14,10 @@ function Signup() {
     const [formData, setFormData] = useState({
         name: '',
         email:'',
+        id: '',
         password:'',
     })
-    const {name, email, password} = formData
+    const {name, email, id, password} = formData
     const navigate = useNavigate()
 
     const onChange = (e) => {
@@ -31,17 +33,28 @@ function Signup() {
         try {
             const auth = getAuth()
             
-            const userCredential = await createUserWithEmailAndPassword (auth, email, password)
+            const userCredential = await createUserWithEmailAndPassword (
+                auth, 
+                email, 
+                id, 
+                password
+            )
 
             const user = userCredential.user
 
             updateProfile(auth.currentUser, {
-                displayName: name
+                displayName: name,
             })
+
+            const formDataCopy = {...formData}
+            delete formDataCopy.password 
+            formDataCopy.timestamp = serverTimestamp()
+
+            await setDoc(doc(db, 'users', user.uid), formDataCopy)
 
             navigate('/')
         } catch (error) {
-            console.log(error);
+            toast.error('Something went wrong with registration')
         }
     }
     return (
@@ -69,6 +82,17 @@ function Signup() {
                             value={email}
                             onChange={onChange}
                         />
+        
+                        <input 
+                            type="number"
+                            className='idInput' 
+                            placeholder='Student ID' 
+                            id='id' 
+                            value={id}
+                            onChange={onChange}
+                        />
+                
+                        
 
                         <div className="passwordInputDiv">
                             <input 
