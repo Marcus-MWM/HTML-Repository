@@ -58,7 +58,7 @@ function Profile() {
             </button>
         </header>
         <main>  
-            <div> className="profileDetailsHeader">
+            <div className="profileDetailsHeader">
                 <p className="profileDetailsText">Personal Details</p>
                 <p className='changePersonalDetails' onClick={() => {
                     changeDetails && onSubmit()
