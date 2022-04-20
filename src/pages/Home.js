@@ -28,10 +28,8 @@ import { Link } from 'react-router-dom';
           </StyledButton>
 
           <StyledButton to="/multi_course">
-            {/* <Link to='./pages/Login'>
-              Login
-            </Link> */}
-            Multi-Course
+            
+             Multi-Course
           </StyledButton>
 
           <StyledButton to="/signup">

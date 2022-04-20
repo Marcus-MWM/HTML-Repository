@@ -83,6 +83,31 @@ export const StyledButton = styled(Link)`
     }
 `;
 
+export const StyledButton2 = styled(Link)`
+    padding: 10px;
+    width: 150px;
+    background-color: transparent;
+    font-size: 16px;
+    border: 3px solid ${colors.primary};
+    border-radius: 25px;
+    color: ${colors.primary};
+    text-decoration: none;
+    text-align: center;
+    transition: ease-in-out 0.3s;
+    outline: 0;
+    bottom: -550px;
+    bottom: -${props => props.sizeB}px;
+    left: 150px;
+    left: ${props => props.sizeL}px;
+    position: absolute;
+
+    &:hover{
+        background-color: ${colors.primary};
+        color: ${colors.theme};
+        cursor: pointer;
+    }
+`;
+
 export const ButtonGroup = styled.div`
     display: flex;
     justify-content: space-around;
@@ -158,6 +183,36 @@ export const StyledFormArea2 = styled.div`
     top: 80px;
     left: 42.5%;
     font-size: 12px;
+`;
+
+export const StyledFormArea3 = styled.div`
+    background-color: lightblue;
+    text-align: center;
+    padding: 45px 55px;
+`;
+
+export const StyledButton3 = styled(Link)`
+    padding: 15px 25px;
+    width: 150px;
+    background-color: transparent;
+    font-size: 16px;
+    border: 2px solid ${colors.theme};
+    border-radius: 25px;
+    color: ${colors.theme};
+    transition: ease-in-out 0.3s;
+    outline: 0;
+
+    &:hover{
+        background-color: ${colors.theme};
+        color: ${colors.primary};
+        cursor: pointer;
+    }
+`;
+
+export const StyledMulti = styled.div`
+    background-color: lightblue;
+    text-align: center;
+    padding: 45px 55px;
 `;
 
 export const StyledLabelChartRight1 = styled.div`
@@ -268,6 +323,24 @@ export const StyledFormButton2 = styled.button`
     }
 `;
 
+export const StyledFormButton3 = styled.button`
+    padding: 10px;
+    width: 150px;
+    background-color: transparent;
+    font-size: 16px;
+    border: 2px solid ${colors.theme};
+    border-radius: 25px;
+    color: ${colors.theme};
+    transition: ease-in-out 0.3s;
+    outline: 0;
+
+    &:hover{
+        background-color: ${colors.theme};
+        color: ${colors.primary};
+        cursor: pointer;
+    }
+`;
+
 export const ErrorMsg = styled.div`
     font-size: 11px;
     color: ${colors.red};
@@ -312,4 +385,17 @@ export const CopyrightText = styled.p`
     margin: 20px;
     text-align: center;
     color: ${colors.light2};
+`;
+
+export const CourseTab = styled.p`
+
+background-color: ${props => props.bg ||
+    colors.light1};
+    text-align: center;
+    position: absolute;
+    padding: 45px 55px;
+    left: ${props => props.sizeL}px;
+    right: ${props => props.sizeR}px;
+    top: 80px;
+    font-weight: bold;
 `;

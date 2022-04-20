@@ -11,6 +11,8 @@ import Courses from "./pages/Courses";
 import Navbar from "./components/Navbar/Navbar";
 import About from './pages/About'
 import Multi_Course from './pages/Multi_Course';
+import Bible_Theo from './pages/Bible_Theo';
+import Hist_Poly from './pages/Hist_Poly';
 
 import Footer from "./components/Footer";
 // =======
@@ -51,6 +53,8 @@ function App() {
           <Route path="/dashboards"> <Dashboards /> </Route>
           <Route path="/about"> <About /> </Route>
           <Route path="/multi_course"> <Multi_Course /> </Route>
+          <Route path="/Bible_Theo"> <Bible_Theo /> </Route>
+          <Route path="/Hist_Poly"> <Hist_Poly /> </Route>
           <StyledContainer image={Wood} size={207}>
             <Route path="/"><Home /></Route>
           </StyledContainer>

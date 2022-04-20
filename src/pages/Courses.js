@@ -8,7 +8,8 @@ import StyledContainer, { StyledTextInput, StyledFormArea,
     StyledFormButton, StyledLabel, Avatar, 
     StyledTitle, colors, ButtonGroup, ExtraText,
     TextLink, CopyrightText, StyledLabelChartRight1,
-    StyledLabelChartTop, StyledFormButton2, StyledLabelChartBottom, StyledBottomBox } from "../Styles";
+    StyledLabelChartTop, StyledFormButton2, StyledLabelChartBottom, 
+    StyledBottomBox, StyledButton, StyledButton2 } from "../Styles";
 
 // courses page
 import "./Courses.css";
@@ -193,7 +194,7 @@ const Courses = () =>{
   return (
       <div className="centered">
         
-        <StyledContainer image={Beach} sizeH = {155}>
+        <StyledContainer image={Beach} sizeH = {175}>
         <StyledFormArea2>
             <h1> Computer Science Course List </h1>
           </StyledFormArea2>
@@ -614,6 +615,18 @@ const Courses = () =>{
             <StyledBottomBox size = {87.5} brand = {"dashed"} sizeB = {450}>
             </StyledBottomBox>
 
+            {/* <StyledButton>
+              Show ENG 113 Composition
+            </StyledButton> */}
+
+            <StyledButton2 to="/Bible_Theo">
+              Show Christian or Intercultural Studies
+            </StyledButton2>
+            <StyledButton2 to="/Hist_Poly" sizeL={550}>
+              WLD161,
+              History, or
+              Poly Sci
+            </StyledButton2>
 
             </StyledContainer>
         
