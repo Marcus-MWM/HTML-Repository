@@ -75,6 +75,7 @@ const Courses = () =>{
   const [EGR_222, EGR_222_A] = useState(false);
   const [test_value, test_value_A] = useState(false);
   const [test_2, test_2_A] = useState(false);
+  const [temp_v, temp_v_A] = useState(false);
   const [agrees, testAgree] = useState(false);
   const menuItems = ["Orange", "EGR222"];
 
@@ -116,16 +117,11 @@ const Courses = () =>{
       } else if(event.target.value === "EGR222"){
         EGR_222_A(!EGR_222);
       } 
-      // if(menuItems.indexOf("EGR222") >= -1){
-      //   test_value_A(!test_value);
-      // }
+
       if( ((updatedList.indexOf("EGR329") > -1) && (updatedList.indexOf("EGR222") > -1))
       && test_value == false ){
         test_value_A(!test_value);
       }
-      // if((updatedList.indexOf("EGR222") > -1) && test_value == false){
-      //   test_value_A(!test_value);
-      // } 
       else if( ((updatedList.indexOf("EGR222") <= -1) || (updatedList.indexOf("EGR329") <= -1))
       && test_value == true) {
         test_value_A(!test_value);
@@ -140,6 +136,15 @@ const Courses = () =>{
       || (updatedList.indexOf("EGR227") <= -1))
       && test_2 == true) {
         test_2_A(!test_2);
+      }
+
+      if( ((updatedList.indexOf("EGR225") > -1) && (updatedList.indexOf("EGR121") > -1))
+      && temp_v == false ){
+        temp_v_A(!temp_v);
+      }
+      else if( ((updatedList.indexOf("EGR225") <= -1) || (updatedList.indexOf("EGR121") <= -1))
+      && temp_v == true) {
+        temp_v_A(!temp_v);
       }
 
       setAgree(updatedList);
@@ -389,7 +394,7 @@ const Courses = () =>{
               <p> EGR 329 (3) </p><span class="min_br"></span> <p>  Computer </p>
               <span class="min_br"></span><p> Architecture </p>
 
-              <input type="checkbox" value="EGR329" id="agree" onChange={checkboxHandler} />
+              <input type="checkbox" value="EGR329" id="agree" disabled={!temp_v} onChange={checkboxHandler} />
             </StyledLabelChartRight1>
             <StyledLabelChartRight1 size = {500} brand = "solid" 
             sizeTop = {740} size1 = {8} size2 = {8} sizeLeft = {15} sizeRight = {15}
@@ -615,14 +620,10 @@ const Courses = () =>{
             <StyledBottomBox size = {87.5} brand = {"dashed"} sizeB = {450}>
             </StyledBottomBox>
 
-            {/* <StyledButton>
-              Show ENG 113 Composition
-            </StyledButton> */}
-
-            <StyledButton2 to="/Bible_Theo">
+            <StyledButton2 to="/Bible_Theo" sizeL={150}>
               Show Christian or Intercultural Studies
             </StyledButton2>
-            <StyledButton2 to="/Hist_Poly" sizeL={550}>
+            <StyledButton2 to="/Hist_Poly" sizeR={150}>
               WLD161,
               History, or
               Poly Sci

@@ -97,8 +97,9 @@ export const StyledButton2 = styled(Link)`
     outline: 0;
     bottom: -550px;
     bottom: -${props => props.sizeB}px;
-    left: 150px;
+    // left: 150px;
     left: ${props => props.sizeL}px;
+    right: ${props => props.sizeR}px;
     position: absolute;
 
     &:hover{
@@ -389,8 +390,7 @@ export const CopyrightText = styled.p`
 
 export const CourseTab = styled.p`
 
-background-color: ${props => props.bg ||
-    colors.light1};
+background-color: lightblue;
     text-align: center;
     position: absolute;
     padding: 45px 55px;
