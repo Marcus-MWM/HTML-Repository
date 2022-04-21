@@ -1,11 +1,13 @@
+import React, { Component }  from 'react';
 // import React from 'react';
 // import './App.css';
 // import Home from './components/Home';
 
+import { Navigate, Outlet } from 'react-router-dom';
 // Pages
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Dashboards from './pages/Dashboards';
+import Dashboard from './pages/Dashboard';
 import Signup from "./pages/Signup";
 import Courses from "./pages/Courses";
 import Navbar from "./components/Navbar/Navbar";
@@ -31,44 +33,40 @@ import {StyledContainer1} from './Styles';
 
 // Loader
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-
 import Beach from '././assests/beach.jpg';
 import Wood from '././assests/bg.jpg';
 
-import {
-  BrowserRouter as Router,
-  Switch, Route
-} from 'react-router-dom';
+// import {useState, useEffect} from "react";
+// import {collection, getDocs, addDoc} from "firebase/firestore"; 
+// import {db} from './firebase/firebase';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <StyledContainer image={Beach} >
-        
-        <Switch>
-          <Route path="/courses"> <Courses /> </Route>
-          <Route path="/signup"> <Signup /> </Route>
-          <Route path="/login"> <Login/> </Route>
-          <Route path="/dashboards"> <Dashboards /> </Route>
-          <Route path="/about"> <About /> </Route>
-          <Route path="/multi_course"> <Multi_Course /> </Route>
-          <Route path="/Bible_Theo"> <Bible_Theo /> </Route>
-          <Route path="/Hist_Poly"> <Hist_Poly /> </Route>
-          <StyledContainer image={Wood} size={207}>
-            <Route path="/"><Home /></Route>
-          </StyledContainer>
-          
-        </Switch>
-        <Footer/>
-        {/* <Navbar/> */}
-        {/* <Home/> */}
-        {/* <Login/> */}
-        {/* <Dashboards /> */}
+    <>
+    <div style={{ backgroundImage:`url(${Wood})`, backgroundSize:"cover", width: '100vw', height: '100vh'}}>
 
-      </StyledContainer>
-    </Router>
-  );
+      
+      <Router>
+      <Navbar/>
+        <Routes>
+          <Route path='/courses' element={<Courses/>} />
+          <Route path='/signup' element={<Signup/>} />
+          <Route path='/login' element={<Login/>} />
+          <Route path='/dashboard' element={<Dashboard/>} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/profile' element={<Profile/>} />
+          <Route path='/forgot-password' element={<ForgotPassword/>} />
+          <Route path='/Zeek' element={<Zeek/>}/>
+          <Route path='/' element={<Home/>} />
+          
+        </Routes> 
+        
+      </Router>
+      <ToastContainer/>
+      </div>
+    </>
+  )
 }
 
 export default App;
