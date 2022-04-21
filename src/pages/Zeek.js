@@ -3,7 +3,7 @@ import { StyledTitle, StyledSubTitle, StyledButton, ButtonGroup } from "../Style
 import { Link } from 'react-router-dom';
 
 
-  const Home = () => {
+  function Zeek () {
     return (
       <div>
         <div>
@@ -17,30 +17,17 @@ import { Link } from 'react-router-dom';
 // >>>>>>> ea2547606c351235f097f38fa17e3019c3de049d */}
         </StyledTitle>
         <StyledSubTitle size={27}>
-          Feel free to explore our page
+          Feel free to
         </StyledSubTitle>
   
         <ButtonGroup>
-          <StyledButton to="/login">
-            {/* <Link to='./pages/Login'>
-              Login
-            </Link> */}
-            Login
-          </StyledButton>
-
           <StyledButton to="/Zeek">
-            zeek
-          </StyledButton>
-
-          <StyledButton to="/signup">
-            {/* <Link to='./components/Signup/'>
-              Signup
-            </Link> */}
-            Sign Up
+            hello
           </StyledButton>
         </ButtonGroup>
+        <h1>hello zeek here</h1>
       </div>
     );
   }
   
-  export default Home;
+  export default Zeek;
