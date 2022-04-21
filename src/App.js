@@ -13,6 +13,7 @@ import Courses from "./pages/Courses";
 import Navbar from "./components/Navbar/Navbar";
 import About from './pages/About';
 import Profile from './pages/Profile';
+import Zeek from './pages/Zeek';
 // import Footer from "./components/Footer";
 import ForgotPassword from './pages/ForgotPassword'
 import {ToastContainer} from 'react-toastify'
@@ -47,6 +48,7 @@ function App() {
           <Route path='/about' element={<About/>} />
           <Route path='/profile' element={<Profile/>} />
           <Route path='/forgot-password' element={<ForgotPassword/>} />
+          <Route path='/Zeek' element={<Zeek/>}/>
           <Route path='/' element={<Home/>} />
           
         </Routes> 
