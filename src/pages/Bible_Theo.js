@@ -5,11 +5,13 @@ import Header from "../components/Header";
 
 import StyledContainer, { CourseTab, StyledButton2 } from "../Styles";
 
+import Beach from "../assests/beach.jpg"
+
 function Bible_Theo() {
   return (
     <>
       <Header text =''/>
-        <div>
+      <div style={{ backgroundImage:`url(${Beach})`, backgroundSize:"cover", width: '100vw', height: '100vh'}}>
           <CourseTab sizeL={30}>
           <h1> Christian Studies</h1>
           <p>
@@ -85,7 +87,7 @@ function Bible_Theo() {
           </p>
           </CourseTab>
 
-          <StyledButton2 to = "/courses" sizeB={50} sizeL = {650}>
+          <StyledButton2 to = "/courses" sizeB={50} sizeL = {650} colorT = "blue">
                 Go back to Course
             </StyledButton2>
         </div>

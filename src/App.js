@@ -15,17 +15,14 @@ import About from './pages/About'
 import Multi_Course from './pages/Multi_Course';
 import Bible_Theo from './pages/Bible_Theo';
 import Hist_Poly from './pages/Hist_Poly';
+import Profile from './pages/Profile';
+import Zeek from './pages/Zeek';
+
+import ForgotPassword from './pages/ForgotPassword'
+import {ToastContainer} from 'react-toastify'
+
 
 import Footer from "./components/Footer";
-// =======
-// import Home from './pages/Home'
-// import Login from './pages/Login'
-// import Dashboards from './pages/Dashboards'
-// import Signup from "./pages/Signup"
-// import Navbar from "./components/Navbar/Navbar"
-// import Courses from './pages/Courses'
-// import About from './pages/About'
-// >>>>>>> 445e8e7021df8aad1d8d1f8f5c1a29babbba6d34
 
 //styled components
 import StyledContainer from './Styles';
@@ -58,6 +55,9 @@ function App() {
           <Route path='/profile' element={<Profile/>} />
           <Route path='/forgot-password' element={<ForgotPassword/>} />
           <Route path='/Zeek' element={<Zeek/>}/>
+          <Route path='/multi_course' element={<Multi_Course/>}/>
+          <Route path="/Bible_Theo" element={<Bible_Theo/>}/>
+          <Route path="/Hist_Poly" element={<Hist_Poly/>}/>
           <Route path='/' element={<Home/>} />
           
         </Routes> 

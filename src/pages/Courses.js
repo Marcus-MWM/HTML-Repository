@@ -197,7 +197,8 @@ const Courses = () =>{
 
 
   return (
-      <div className="centered">
+      // <div className="centered">
+      <div style={{ backgroundImage:`url(${Beach})`, backgroundSize:"cover", width: '100vw', height: '100vh'}}>
         
         <StyledContainer image={Beach} sizeH = {175}>
         <StyledFormArea2>
@@ -597,27 +598,27 @@ const Courses = () =>{
             <StyledLabelChartBottom size = {32.5}>
               <p>Unique to Computer Science: </p>
             </StyledLabelChartBottom>
-            <StyledBottomBox size = {43.2} colorS = {"lightblue"} lengthS = {23}>
+            <StyledBottomBox size = {44.5} colorS = {"lightblue"} lengthS = {23}>
             </StyledBottomBox>
             <StyledLabelChartBottom size = {52.5} sizeR = {60}>
               <p>Requirement (not a course): </p>
             </StyledLabelChartBottom>
-            <StyledBottomBox size = {67} colorS = {"lightgray"} lengthS = {23}>
+            <StyledBottomBox size = {64.5} colorS = {"lightgray"} lengthS = {23}>
             </StyledBottomBox>
-            <StyledLabelChartBottom size = {73.5} sizeR = {20}>
+            <StyledLabelChartBottom size = {73.5} sizeR = {20} width = {245}>
               <p>Course offered only in specified semster: </p>
             </StyledLabelChartBottom>
-            <StyledBottomBox size = {85.5} brand = {"solid"}>
+            <StyledBottomBox size = {86.5} brand = {"solid"}>
             </StyledBottomBox>
             <StyledLabelChartBottom sizeR = {50} sizeB = {450}>
               <p>Course offered only in both Fail and Spring: </p>
             </StyledLabelChartBottom>
-            <StyledBottomBox size = {26.5} sizeB = {450} brand = {"solid"} colorB = {"orange"}>
+            <StyledBottomBox size = {22.5} sizeB = {450} brand = {"solid"} colorB = {"orange"}>
             </StyledBottomBox>
-            <StyledLabelChartBottom size = {73.5} sizeR = {50} sizeB = {450}>
-              <p>Course offered only in both Fail and Spring: </p>
+            <StyledLabelChartBottom size = {73.5} sizeR = {50} sizeB = {450} width={245}>
+              <p>Course taught OUTSIDE of the CoE: </p>
             </StyledLabelChartBottom>
-            <StyledBottomBox size = {87.5} brand = {"dashed"} sizeB = {450}>
+            <StyledBottomBox size = {86.5} brand = {"dashed"} sizeB = {450}>
             </StyledBottomBox>
 
             <StyledButton2 to="/Bible_Theo" sizeL={150}>

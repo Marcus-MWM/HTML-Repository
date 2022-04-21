@@ -89,8 +89,10 @@ export const StyledButton2 = styled(Link)`
     background-color: transparent;
     font-size: 16px;
     border: 3px solid ${colors.primary};
+    border-color: ${props => props.colorT};
     border-radius: 25px;
     color: ${colors.primary};
+    color: ${props => props.colorT};
     text-decoration: none;
     text-align: center;
     transition: ease-in-out 0.3s;
@@ -189,12 +191,15 @@ export const StyledFormArea2 = styled.div`
 export const StyledFormArea3 = styled.div`
     background-color: lightblue;
     text-align: center;
-    padding: 45px 55px;
+    padding: 15px 55px;
+    top: 200px;
+    left: 32.5%;
+    position: absolute;
 `;
 
 export const StyledButton3 = styled(Link)`
     padding: 15px 25px;
-    width: 150px;
+    // width: 150px;
     background-color: transparent;
     font-size: 16px;
     border: 2px solid ${colors.theme};
@@ -241,11 +246,12 @@ export const StyledLabelChartBottom = styled.div`
     text-align: left;
     padding-left: 10px;
     padding-right: ${props => props.sizeR}px;
-    width: 200px;
+    width: 230px;
+    width: ${props => props.width}px;
     position: absolute;
     bottom: -350px;
     bottom: -${props => props.sizeB}px;
-    left: 12.5%;
+    left: 10.5%;
     left: ${props => props.size}%;
     font-size: 16px;
 `;

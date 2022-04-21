@@ -10,11 +10,7 @@ import { Link } from 'react-router-dom';
           
         </div>
         <StyledTitle size={65}>
-{/* <<<<<<< HEAD */}
           Welcome to Course Planner
-{/* ======= */}
-{/* //           Welcome to our Course Web App!
-// >>>>>>> ea2547606c351235f097f38fa17e3019c3de049d */}
         </StyledTitle>
         <StyledSubTitle size={27}>
           Feel free to explore our page
@@ -32,6 +28,10 @@ import { Link } from 'react-router-dom';
             
              Multi-Course
           </StyledButton>
+          {/* <StyledButton to="/about">
+            
+             About
+          </StyledButton> */}
 
           <StyledButton to="/signup">
             {/* <Link to='./components/Signup/'>
