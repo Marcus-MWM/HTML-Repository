@@ -184,7 +184,7 @@ export const StyledFormArea2 = styled.div`
     padding: 1px 55px;
     position: absolute;
     top: 80px;
-    left: 42.5%;
+    left: 35%;
     font-size: 12px;
 `;
 
