@@ -14,6 +14,8 @@ import Navbar from "./components/Navbar/Navbar";
 import About from './pages/About';
 import Profile from './pages/Profile';
 import PrivateRoute from './components/PrivateRoute';
+import Hist_Poly from './pages/Hist_Poly';
+import Bible_Theo from './pages/Bible_Theo';
 // import Footer from "./components/Footer";
 import ForgotPassword from './pages/ForgotPassword'
 import {ToastContainer} from 'react-toastify'
@@ -31,6 +33,7 @@ import Wood from '././assests/bg.jpg';
 // import {collection, getDocs, addDoc} from "firebase/firestore"; 
 // import {db} from './firebase/firebase';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+
 
 function App() {
   return (
@@ -50,6 +53,8 @@ function App() {
             <Route path='/profile' element={<Profile/>} />
           </Route>
           <Route path='/forgot-password' element={<ForgotPassword/>} />
+          <Route path='/bible-theo' element={<Bible_Theo/>} />
+          <Route path='/hist-poly' element={<Hist_Poly/>} />
           <Route path='/zeeks' element={<Zeeks/>} />
           <Route path='/' element={<Home/>} />
           
