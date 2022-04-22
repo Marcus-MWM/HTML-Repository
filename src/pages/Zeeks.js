@@ -1,9 +1,9 @@
 import React, { Component }  from 'react';
 import { StyledTitle, StyledSubTitle, StyledButton, ButtonGroup } from "../Styles";
 import { Link } from 'react-router-dom';
-import Zeeks from './Zeeks';
 
-  const Home = () => {
+
+  const Zeeks = () => {
     return (
       <div>
         <div>
@@ -28,13 +28,6 @@ import Zeeks from './Zeeks';
             Login
           </StyledButton>
 
-          <StyledButton to="/zeeks">
-            {/* <Link to='./pages/Login'>
-              Login
-            </Link> */}
-            Zeek
-          </StyledButton>
-
           <StyledButton to="/signup">
             {/* <Link to='./components/Signup/'>
               Signup
@@ -46,4 +39,4 @@ import Zeeks from './Zeeks';
     );
   }
   
-  export default Home;
+  export default Zeeks;
