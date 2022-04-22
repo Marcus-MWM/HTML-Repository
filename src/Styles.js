@@ -49,6 +49,7 @@ export const StyledSubTitle = styled.p`
     font-size: ${(props) => props.size}px;
     text-align: center;
     color: ${(props) => props.color ? props.color : colors.primary};
+    font-weight: bold;
     padding: 5px;
     margin-bottom: 25px;
 `;
@@ -66,7 +67,7 @@ export const Avatar = styled.div`
 export const StyledButton = styled(Link)`
     padding: 10px;
     width: 150px;
-    background-color: transparent;
+    background-color: blue;
     font-size: 16px;
     border: 3px solid ${colors.primary};
     border-radius: 25px;
