@@ -7,5 +7,6 @@
 }
 
 .title{
-    padding-right: 155px;
+    position: absolute;
+    bottom: -250px;
 }

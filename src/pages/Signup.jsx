@@ -9,6 +9,8 @@ import { db } from '../firebase-config'
 import { ReactComponent as ArrowRightIcon } from '../assests/svg/keyboardArrowRightIcon.svg'
 import visibilityIcon from '../assests/svg/visibilityIcon.svg'
 
+import "./Signup.css";
+
 function Signup() {
     const [showPassword, setShowPassword] = useState(false)
     const [formData, setFormData] = useState({
@@ -128,7 +130,7 @@ function Signup() {
                         </div>
                     </form>
                  {/* Google OAuth */}
-                 <Link to='/login' className='registerLink'>
+                 <Link to='/login' className='registerLink2'>
                      Sign In Instead
                  </Link>
             </div>
