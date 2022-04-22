@@ -20,7 +20,7 @@ import 'react-toastify/dist/ReactToastify.css'
 //styled components
 import StyledContainer from './Styles';
 import {StyledContainer1} from './Styles';
-
+import Zeeks from './pages/Zeeks';
 // Loader
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Beach from '././assests/beach.jpg';
@@ -47,6 +47,7 @@ function App() {
           <Route path='/about' element={<About/>} />
           <Route path='/profile' element={<Profile/>} />
           <Route path='/forgot-password' element={<ForgotPassword/>} />
+          <Route path='/zeeks' element={<Zeeks/>} />
           <Route path='/' element={<Home/>} />
           
         </Routes> 
