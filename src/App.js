@@ -16,6 +16,7 @@ import Profile from './pages/Profile';
 import PrivateRoute from './components/PrivateRoute';
 import Hist_Poly from './pages/Hist_Poly';
 import Bible_Theo from './pages/Bible_Theo';
+import Multi_Course from './pages/Multi_Course'
 // import Footer from "./components/Footer";
 import ForgotPassword from './pages/ForgotPassword'
 import {ToastContainer} from 'react-toastify'
@@ -55,6 +56,7 @@ function App() {
           <Route path='/forgot-password' element={<ForgotPassword/>} />
           <Route path='/bible-theo' element={<Bible_Theo/>} />
           <Route path='/hist-poly' element={<Hist_Poly/>} />
+          <Route path='/multi-course' element={<Multi_Course/>} />
           <Route path='/zeeks' element={<Zeeks/>} />
           <Route path='/' element={<Home/>} />
           
