@@ -624,6 +624,9 @@ const Courses = () =>{
             <StyledButton2 to="/Bible_Theo" sizeL={150}>
               Show Christian or Intercultural Studies
             </StyledButton2>
+            <StyledButton2 to="/SavedCourse" sizeR={650} sizeL={650}>
+              Save Course List
+            </StyledButton2>
             <StyledButton2 to="/Hist_Poly" sizeR={150}>
               WLD161,
               History, or
