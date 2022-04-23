@@ -28,6 +28,15 @@ import Zeeks from './Zeeks';
             Login
           </StyledButton>
 
+          <ButtonGroup>
+          <StyledButton to="/multi-course">
+            {/* <Link to='./components/Signup/'>
+              Signup
+            </Link> */}
+            Multi Course
+          </StyledButton>
+          </ButtonGroup>
+
           <StyledButton to="/signup">
             {/* <Link to='./components/Signup/'>
               Signup

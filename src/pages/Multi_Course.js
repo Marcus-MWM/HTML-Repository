@@ -173,7 +173,7 @@ import StyledContainer, { StyledTextInput, StyledFormArea,
     TextLink, CopyrightText, StyledLabelChartRight1,
     StyledLabelChartTop, StyledFormButton2, StyledLabelChartBottom, 
     StyledBottomBox, StyledButton, StyledFormArea3, StyledMulti, 
-    StyledButton3 } from "../Styles";
+    StyledButton3 } from "../components/Styles";
 import Courses from "./Courses";
 
 import "./Multi_Course.css";
