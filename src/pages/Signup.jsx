@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from 'react';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom'
 // import { toast } from 'react-toastify'
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
@@ -56,7 +56,8 @@ function Signup() {
 
             navigate('/')
         } catch (error) {
-            toast.error('Something went wrong with registration')
+            console.error()
+            // toast.error('Something went wrong with registration')
         }
     }
     return (

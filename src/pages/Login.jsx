@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {toast} from 'react-toastify'
+// import {toast} from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
 // import { toast } from 'react-toastify'
 import {getAuth, signInWithEmailAndPassword } from 'firebase/auth'
@@ -43,7 +43,7 @@ function Login() {
         navigate('/')
       }
     } catch (error) {
-      toast.error('Bad User Credentials')
+      console.error()
     }
   }
 
@@ -96,7 +96,7 @@ function Login() {
 
         
 
-        <Link to='/sign-up' className='registerLink'>
+        <Link to='/signup' className='registerLink'>
           Sign Up Instead
         </Link>
       </div>
