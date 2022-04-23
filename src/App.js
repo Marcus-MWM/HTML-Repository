@@ -17,6 +17,7 @@ import Bible_Theo from './pages/Bible_Theo';
 import Hist_Poly from './pages/Hist_Poly';
 import Profile from './pages/Profile';
 import Zeek from './pages/Zeek';
+import PrivateRoute from './components/PrivateRoute';
 
 import ForgotPassword from './pages/ForgotPassword'
 import {ToastContainer} from 'react-toastify'
