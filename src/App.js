@@ -16,15 +16,8 @@ import Multi_Course from './pages/Multi_Course';
 import Bible_Theo from './pages/Bible_Theo';
 import Hist_Poly from './pages/Hist_Poly';
 import Profile from './pages/Profile';
-<<<<<<< HEAD
 import Zeek from './pages/Zeek';
 
-=======
-import PrivateRoute from './components/PrivateRoute';
-import Hist_Poly from './pages/Hist_Poly';
-import Bible_Theo from './pages/Bible_Theo';
-// import Footer from "./components/Footer";
->>>>>>> origin/mbtesting
 import ForgotPassword from './pages/ForgotPassword'
 import {ToastContainer} from 'react-toastify'
 
@@ -64,16 +57,10 @@ function App() {
             <Route path='/profile' element={<Profile/>} />
           </Route>
           <Route path='/forgot-password' element={<ForgotPassword/>} />
-<<<<<<< HEAD
           <Route path='/Zeek' element={<Zeek/>}/>
           <Route path='/multi_course' element={<Multi_Course/>}/>
           <Route path="/Bible_Theo" element={<Bible_Theo/>}/>
           <Route path="/Hist_Poly" element={<Hist_Poly/>}/>
-=======
-          <Route path='/bible-theo' element={<Bible_Theo/>} />
-          <Route path='/hist-poly' element={<Hist_Poly/>} />
-          <Route path='/zeeks' element={<Zeeks/>} />
->>>>>>> origin/mbtesting
           <Route path='/' element={<Home/>} />
           
         </Routes> 

@@ -9,11 +9,7 @@ import StyledContainer, { StyledTextInput, StyledFormArea,
     StyledTitle, colors, ButtonGroup, ExtraText,
     TextLink, CopyrightText, StyledLabelChartRight1,
     StyledLabelChartTop, StyledFormButton2, StyledLabelChartBottom, 
-<<<<<<< HEAD
     StyledBottomBox, StyledButton, StyledButton2 } from "../Styles";
-=======
-    StyledBottomBox, StyledButton, StyledButton2 } from "../components/Styles";
->>>>>>> origin/mbtesting
 
 // courses page
 import "./Courses.css";
@@ -628,7 +624,6 @@ const Courses = () =>{
             <StyledBottomBox size = {86.5} brand = {"dashed"} sizeB = {450}>
             </StyledBottomBox>
 
-<<<<<<< HEAD
             <StyledButton2 to="/Bible_Theo" sizeL={150}>
               Show Christian or Intercultural Studies
             </StyledButton2>
@@ -636,12 +631,6 @@ const Courses = () =>{
               Save Course List
             </StyledButton2>
             <StyledButton2 to="/Hist_Poly" sizeR={150}>
-=======
-            <StyledButton2 to="/Bible-Theo" sizeL={150}>
-              Show Christian or Intercultural Studies
-            </StyledButton2>
-            <StyledButton2 to="/Hist-Poly" sizeR={150}>
->>>>>>> origin/mbtesting
               WLD161,
               History, or
               Poly Sci
