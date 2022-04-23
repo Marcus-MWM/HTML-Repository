@@ -96,7 +96,7 @@ function Login() {
 
         
 
-        <Link to='/sign-up' className='registerLink'>
+        <Link to='/signup' className='registerLink'>
           Sign Up Instead
         </Link>
       </div>
