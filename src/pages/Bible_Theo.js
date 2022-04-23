@@ -1,9 +1,16 @@
 // about page
+<<<<<<< HEAD
 
 import React from "react";
 import Header from "../components/Header";
 
 import StyledContainer, { CourseTab, StyledButton2 } from "../Styles";
+=======
+import React from "react";
+import Header from "../components/Header";
+
+import StyledContainer, { CourseTab, StyledButton2 } from "../components/Styles";
+>>>>>>> origin/mbtesting
 
 import Beach from "../assests/beach.jpg"
 

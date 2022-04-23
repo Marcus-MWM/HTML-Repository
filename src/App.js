@@ -16,8 +16,15 @@ import Multi_Course from './pages/Multi_Course';
 import Bible_Theo from './pages/Bible_Theo';
 import Hist_Poly from './pages/Hist_Poly';
 import Profile from './pages/Profile';
+<<<<<<< HEAD
 import Zeek from './pages/Zeek';
 
+=======
+import PrivateRoute from './components/PrivateRoute';
+import Hist_Poly from './pages/Hist_Poly';
+import Bible_Theo from './pages/Bible_Theo';
+// import Footer from "./components/Footer";
+>>>>>>> origin/mbtesting
 import ForgotPassword from './pages/ForgotPassword'
 import {ToastContainer} from 'react-toastify'
 
@@ -27,7 +34,7 @@ import Footer from "./components/Footer";
 //styled components
 import StyledContainer from './Styles';
 import {StyledContainer1} from './Styles';
-
+import Zeeks from './pages/Zeeks';
 // Loader
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Beach from '././assests/beach.jpg';
@@ -37,6 +44,7 @@ import Wood from '././assests/bg.jpg';
 // import {collection, getDocs, addDoc} from "firebase/firestore"; 
 // import {db} from './firebase/firebase';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+
 
 function App() {
   return (
@@ -52,12 +60,20 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/dashboard' element={<Dashboard/>} />
           <Route path='/about' element={<About/>} />
-          <Route path='/profile' element={<Profile/>} />
+          <Route path='/profile' element={<PrivateRoute />}>
+            <Route path='/profile' element={<Profile/>} />
+          </Route>
           <Route path='/forgot-password' element={<ForgotPassword/>} />
+<<<<<<< HEAD
           <Route path='/Zeek' element={<Zeek/>}/>
           <Route path='/multi_course' element={<Multi_Course/>}/>
           <Route path="/Bible_Theo" element={<Bible_Theo/>}/>
           <Route path="/Hist_Poly" element={<Hist_Poly/>}/>
+=======
+          <Route path='/bible-theo' element={<Bible_Theo/>} />
+          <Route path='/hist-poly' element={<Hist_Poly/>} />
+          <Route path='/zeeks' element={<Zeeks/>} />
+>>>>>>> origin/mbtesting
           <Route path='/' element={<Home/>} />
           
         </Routes> 

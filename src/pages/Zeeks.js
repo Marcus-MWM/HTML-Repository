@@ -1,16 +1,20 @@
 import React, { Component }  from 'react';
 import { StyledTitle, StyledSubTitle, StyledButton, ButtonGroup } from "../Styles";
 import { Link } from 'react-router-dom';
-import Zeeks from './Zeeks';
 
-  const Home = () => {
+
+  const Zeeks = () => {
     return (
       <div>
         <div>
           
         </div>
         <StyledTitle size={65}>
+{/* <<<<<<< HEAD */}
           Welcome to Course Planner
+{/* ======= */}
+{/* //           Welcome to our Course Web App!
+// >>>>>>> ea2547606c351235f097f38fa17e3019c3de049d */}
         </StyledTitle>
         <StyledSubTitle size={27}>
           Feel free to explore our page
@@ -24,15 +28,6 @@ import Zeeks from './Zeeks';
             Login
           </StyledButton>
 
-          <StyledButton to="/multi_course">
-            
-             Multi-Course
-          </StyledButton>
-          {/* <StyledButton to="/about">
-            
-             About
-          </StyledButton> */}
-
           <StyledButton to="/signup">
             {/* <Link to='./components/Signup/'>
               Signup
@@ -44,4 +39,4 @@ import Zeeks from './Zeeks';
     );
   }
   
-  export default Home;
+  export default Zeeks;

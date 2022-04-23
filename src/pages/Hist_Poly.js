@@ -3,7 +3,11 @@
 import React from "react";
 import Header from "../components/Header";
 
+<<<<<<< HEAD
 import StyledContainer, { CourseTab, StyledButton2 } from "../Styles";
+=======
+import StyledContainer, { CourseTab, StyledButton2 } from "../components/Styles";
+>>>>>>> origin/mbtesting
 
 import Beach from "../assests/beach.jpg"
 
