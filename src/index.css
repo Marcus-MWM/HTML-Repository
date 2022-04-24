@@ -239,7 +239,7 @@ button {
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
   position: absolute;
-  right: 50px;
+  right: 35em;
 }
 
 .signInBar,
@@ -888,4 +888,12 @@ button {
   margin-left: 1rem;
   font-size: 0.8rem;
   opacity: 0.75;
+}
+
+.pageContainer {
+  
+  position: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50em;
 }
