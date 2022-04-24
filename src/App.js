@@ -2,7 +2,8 @@ import React, { Component }  from 'react';
 // import React from 'react';
 // import './App.css';
 // import Home from './components/Home';
-
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { Navigate, Outlet } from 'react-router-dom';
 // Pages
 import Home from './pages/Home';
@@ -18,9 +19,7 @@ import Hist_Poly from './pages/Hist_Poly';
 import Profile from './pages/Profile';
 import Zeek from './pages/Zeek';
 import PrivateRoute from './components/PrivateRoute';
-
 import ForgotPassword from './pages/ForgotPassword'
-import {ToastContainer} from 'react-toastify'
 
 
 import Footer from "./components/Footer";

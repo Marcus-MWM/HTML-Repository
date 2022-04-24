@@ -43,7 +43,7 @@ function Login() {
         navigate('/')
       }
     } catch (error) {
-      console.error()
+      toast.error('Bad User Credentials')
     }
   }
 
