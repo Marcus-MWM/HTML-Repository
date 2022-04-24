@@ -729,6 +729,12 @@ idInput[type=number]::-webkit-inner-spin-button {
   border-radius: 1rem;
 }
 
+.logOut:hover {
+  background-color: #ffffff;
+  color:#000000;
+  
+}
+
 .profileDetailsHeader {
   display: flex;
   justify-content: space-between;
