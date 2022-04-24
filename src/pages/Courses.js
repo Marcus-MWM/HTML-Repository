@@ -198,7 +198,7 @@ const Courses = () =>{
 
   return (
       // <div className="centered">
-      <div style={{ backgroundImage:`url(${Beach})`, backgroundSize:"cover", width: '100vw', height: '100vh'}}>
+      <div className="CourseList" style={{ backgroundImage:`url(${Beach})`, backgroundSize:"cover", width: '100vw', height: '100vh'}}>
         
         <StyledContainer image={Beach} sizeH = {175}>
         <StyledFormArea2>
@@ -614,7 +614,7 @@ const Courses = () =>{
             <StyledBottomBox size = {86.5} brand = {"solid"}>
             </StyledBottomBox>
             <StyledLabelChartBottom sizeR = {50} sizeB = {450}>
-              <p>Course offered only in both Fail and Spring: </p>
+              <p>Course offered in both Fall and Spring: </p>
             </StyledLabelChartBottom>
             <StyledBottomBox size = {22.5} sizeB = {450} brand = {"solid"} colorB = {"orange"}>
             </StyledBottomBox>
