@@ -32,7 +32,7 @@ function ForgotPassword() {
                     <input type="email" className='emailInput' 
                     placeholder='Email' id='email' value={email} onChange={onChange} 
                     />
-                    <Link className='forgotPasswordLink' to='/login'>
+                    <Link className='forgotPasswordLinkLogin' to='/login'>
                         Sign In
                     </Link>
                     <div className="signInBar">

@@ -237,6 +237,27 @@ idInput[type=number]::-webkit-inner-spin-button {
   padding: 1rem;
 }
 
+.forgotPasswordLinkLogin {
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #00cc66;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  position: relative;
+  left: 700px;
+  width: 100px;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.forgotPasswordLinkLogin:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 .forgotPasswordLink {
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
@@ -265,6 +286,7 @@ idInput[type=number]::-webkit-inner-spin-button {
   justify-content: space-between;
   align-items: center;
   position: inherit;
+
 }
 
 .signInButton,
@@ -272,7 +294,7 @@ idInput[type=number]::-webkit-inner-spin-button {
 .signInText,
 .signUpText {
   cursor: pointer;
-  color: #f8f8ff;
+  color: #ffffff;
 }
 @media (min-width: 1024px) {
   .signInBar,
