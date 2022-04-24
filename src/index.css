@@ -209,8 +209,8 @@ button {
   
 }
 
-idInput::-webkit-outer-spin-button,
-idInput::-webkit-inner-spin-button {
+idInput[type=number]::-webkit-outer-spin-button,
+idInput[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -246,8 +246,9 @@ idInput::-webkit-inner-spin-button {
   background-color: #00cc66;
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
-  position: absolute;
-  right: 35em;
+  position: relative;
+  left: 625px;
+  width: 165px;
 }
 
 .signInBar,
