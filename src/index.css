@@ -191,7 +191,9 @@ button {
 }
 
 .nameInput {
+  
   margin-bottom: 2rem;
+  /* width: 800px; */
   background: url('./assests/svg/badgeIcon.svg') #ffffff 2.5% center no-repeat;
 }
 
@@ -229,9 +231,15 @@ button {
 
 .forgotPasswordLink {
   cursor: pointer;
-  color: #00cc66;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
   font-weight: 600;
-  text-align: right;
+  color: #ffffff;
+  background-color: #00cc66;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  position: absolute;
+  right: 50px;
 }
 
 .signInBar,
@@ -307,26 +315,38 @@ button {
 
 .registerLink {
   margin-top: 4rem;
-  color: #00cc66;
-  font-weight: 600;
+  font-weight: 1000;
   text-align: center;
   position:absolute;
-  background-color: white;
   left: 45%;
   bottom: 5%;
   margin-bottom: 3rem;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #00cc66;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
 }
 
 .registerLink2 {
   margin-top: 4rem;
-  color: #00cc66;
-  font-weight: 600;
+  font-weight: 1000;
   text-align: center;
-  margin-bottom: 3rem;
   position:absolute;
-  background-color: white;
   left: 45%;
   bottom: 5%;
+  margin-bottom: 3rem;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #00cc66;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
 }
 
 @media (min-width: 1217px) {
@@ -803,6 +823,7 @@ button {
   border: none;
   outline: none;
   font-family: 'Montserrat', sans-serif;
+
 }
 .formInputSmall,
 .formInputFile {
