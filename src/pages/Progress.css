@@ -1,0 +1,26 @@
+.progrees-wrapper {
+    background-color: #fff;
+}
+
+.con {
+    padding: 20px;
+    background-image: url(/static/media/bg.d66f8bdf.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+}
+
+.semester {
+    padding: 10px;
+    margin: 0;
+}
+
+.back-btn {
+    text-align: center;
+}
+
+.heading {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}

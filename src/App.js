@@ -9,6 +9,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Progress from "./pages/Progress";
 import Signup from "./pages/Signup";
 import Courses from "./pages/Courses";
 import Navbar from "./components/Navbar/Navbar";
@@ -62,6 +63,7 @@ function App() {
           <Route path="/Bible_Theo" element={<Bible_Theo/>}/>
           <Route path="/Hist_Poly" element={<Hist_Poly/>}/>
           <Route path='/' element={<Home/>} />
+          <Route path="/progress" element={<Progress />} />
           
         </Routes> 
         

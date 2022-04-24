@@ -1,0 +1,16 @@
+.table {
+    width: 100%;
+    text-align: left;
+}
+
+.table-head {
+    background-color: #ebedf2;
+}
+.table th,
+.table td{
+    padding: 10px;
+    border: 1px solid black;
+}
+.table td span{
+    font-weight: bold;
+}

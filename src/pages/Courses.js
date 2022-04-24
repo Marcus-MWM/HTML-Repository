@@ -624,6 +624,9 @@ const Courses = () =>{
             <StyledBottomBox size = {86.5} brand = {"dashed"} sizeB = {450}>
             </StyledBottomBox>
 
+            <StyledButton2 to="/progress" sizeL={650} sizeB={450}>
+              Your Progress
+            </StyledButton2>
             <StyledButton2 to="/Bible_Theo" sizeL={150}>
               Show Christian or Intercultural Studies
             </StyledButton2>
