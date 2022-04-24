@@ -1,13 +1,13 @@
 import React, { useState, useEffect }  from 'react';
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom'
-// import { toast } from 'react-toastify'
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { setDoc, doc, serverTimestamp } from 'firebase/firestore'
 import { db } from '../firebase-config'
-// import OAuth from '../components/OAuth'
 import { ReactComponent as ArrowRightIcon } from '../assests/svg/keyboardArrowRightIcon.svg'
 import visibilityIcon from '../assests/svg/visibilityIcon.svg'
+// google oauth
+// import OAuth from '../components/OAuth'
 
 import "./Signup.css";
 
@@ -57,7 +57,7 @@ function Signup() {
             navigate('/')
         } catch (error) {
             console.error()
-            // toast.error('Something went wrong with registration')
+            toast.error('Something went wrong with registration')
         }
     }
     return (
