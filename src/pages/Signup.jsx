@@ -95,8 +95,6 @@ function Signup() {
                             onChange={onChange}
                         />
                 
-                        
-
                         <div className="passwordInputDiv">
                             <input 
                                 type={showPassword ? 'text' : 'password'}  
