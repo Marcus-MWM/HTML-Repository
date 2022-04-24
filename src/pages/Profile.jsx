@@ -5,7 +5,7 @@ import {updateDoc, doc} from 'firebase/firestore'
 import {db} from '../firebase-config'
 import { useNavigate, Link } from 'react-router-dom'
 import {toast} from 'react-toastify'
-
+import "./Signup.css"
 
 function Profile() {
     const auth = getAuth()
@@ -64,7 +64,7 @@ function Profile() {
                     changeDetails && onSubmit()
                     setChangeDetails((prevState) => !prevState)
                 }}>
-                    {changeDetails ? 'done' : 'change'}
+                    {changeDetails ? 'done' : 'Change'}
                 </p>
 
             </div>
